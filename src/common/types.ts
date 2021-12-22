@@ -36,3 +36,9 @@ export interface validateProps {
   message: string;
   email: string;
 }
+export interface CardProps {
+  img: string;
+  title: string;
+  header: string;
+  content?: string;
+}

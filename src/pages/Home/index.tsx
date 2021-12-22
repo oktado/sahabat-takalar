@@ -27,6 +27,7 @@ const Home = () => {
         id="intro"
       />
       <MiddleBlock
+        header={MiddleBlockContent.header}
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}

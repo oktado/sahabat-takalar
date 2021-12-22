@@ -1,0 +1,16 @@
+.title-card {
+  color: #f9004d;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+.header-card {
+  color: #c4cfde;
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 0;
+}
