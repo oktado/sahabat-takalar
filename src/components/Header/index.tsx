@@ -3,7 +3,7 @@ import { Row, Col, Drawer } from "antd";
 import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
+import { ButtonNavbar } from "../../common/ButtonNavbar";
 import {
   HeaderSection,
   LogoContainer,
@@ -15,6 +15,8 @@ import {
   Outline,
   Span,
 } from "./styles";
+
+import "./index.css"
 
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
@@ -38,20 +40,29 @@ const Header = ({ t }: any) => {
     return (
       <>
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("Tessssss")}</Span>
+          <Span>{t("HOME")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
+          <Span>{t("BERITA")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
+          <Span>{t("MULTIMEDIA")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+          <Span>{t("PROFILE")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+          <Span>{t("MITRA")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+          <Span>{t("CONTACT")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
-          style={{ width: "180px" }}
+          style={{ width: "99px" }}
           onClick={() => scrollTo("contact")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <div className='btn-nav-login'>{t("LOGIN")}</div>
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -63,8 +74,9 @@ const Header = ({ t }: any) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <div className='profile-picture'></div>
           </LogoContainer>
+          <span className="text-logo">SAHABAT TAKALAR</span>
           <NotHidden>
             <MenuItem />
           </NotHidden>

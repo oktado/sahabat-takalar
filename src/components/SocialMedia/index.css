@@ -1,0 +1,44 @@
+.container-social-media {
+  display: flex;
+}
+
+.container-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+.icon {
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #242424;
+  box-shadow: 10px 10px 13px #212121, -10px -10px 13px #272727;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background: rgb(27, 27, 27);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 10px 10px 13px #212121, -10px -10px 13px #272727;
+  transition: all 0.3s ease-in-out;
+}
+
+.title-social-media {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .container-icon {
+    width: 70%;
+  }
+}

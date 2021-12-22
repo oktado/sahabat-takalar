@@ -18,10 +18,12 @@ const Home = () => {
       <ScrollToTop />
       <ContentBlock
         type="right"
+        greetings={IntroContent.greetings}
         title={IntroContent.title}
         content={IntroContent.text}
-        button={IntroContent.button}
-        icon="developer.svg"
+        job={IntroContent.job}
+        name={IntroContent.name}
+        icon="professional-man.jpg"
         id="intro"
       />
       <MiddleBlock

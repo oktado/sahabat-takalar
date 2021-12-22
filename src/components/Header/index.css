@@ -1,0 +1,59 @@
+.btn-nav-login {
+  background: linear-gradient(145deg, #202020, #272727);
+  box-shadow: 19px 19px 38px #171717, -19px -19px 38px #313131;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  border-radius: 10px;
+  padding: 13px 0;
+  cursor: pointer;
+  margin-top: 0.625rem;
+  max-width: 180px;
+  transition: all 0.3s ease-in-out;
+  color: red;
+}
+
+.btn-nav-login:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+  color: red;
+}
+
+.text-logo {
+  color: #c4cfde;
+  margin-right: 150px;
+  margin-top: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-left: 10px;
+}
+
+.anticon svg {
+  fill: #ffff;
+}
+
+@media only screen and (max-width: 411px) {
+  .text-logo {
+    font-size: small;
+    position: absolute;
+    left: 85px;
+    width: fit-content;
+  }
+
+  .btn-nav-login {
+    background: linear-gradient(145deg, #202020, #272727);
+    box-shadow: 19px 19px 38px #171717, -19px -19px 38px #313131;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 10px;
+    padding: 13px 0;
+    cursor: pointer;
+    margin-top: 0.625rem;
+    max-width: 180px;
+    transition: all 0.3s ease-in-out;
+    color: red;
+    margin-left: 50px;
+  }
+}

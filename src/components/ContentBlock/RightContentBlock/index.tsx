@@ -1,57 +1,52 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../../common/SvgIcon";
-import { Button } from "../../../common/Button";
 import { ContentBlockProps } from "../types";
 import { Fade } from "react-awesome-reveal";
+import SocialMedia from '../../SocialMedia/index'
+
+// import FacebookLogo from '../../../../public/img/svg/facebook.png'
+// import InstagramLogo from '../../../../public/img/svg/instagram.png'
+// import TwitterLogo from '../../../../public/img/svg/twitter-sign.png'
+
 import {
   RightBlockContainer,
   Content,
   ContentWrapper,
-  ButtonWrapper,
+  ContentStyling,
+  SectionSocialMedia,
+  SvgResponsive
 } from "./styles";
+
+import './index.css'
 
 const RightBlock = ({
   title,
   content,
-  button,
   icon,
+  greetings,
+  job,
+  name,
   t,
-  id,
+  id
 }: ContentBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   return (
     <RightBlockContainer>
       <Fade direction="right">
-        <Row justify="space-between" align="middle" id={id}>
-          <Col lg={11} md={11} sm={11} xs={24}>
+        <Row justify="space-between" align="top" id={id}>
+          <Col lg={12} md={11} sm={11} xs={24}>
             <ContentWrapper>
-              <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
-              <ButtonWrapper>
-                {typeof button === "object" &&
-                  button.map((item: any, id: number) => {
-                    return (
-                      <Button
-                        key={id}
-                        color={item.color}
-                        fixedWidth={true}
-                        onClick={() => scrollTo("about")}
-                      >
-                        {t(item.title)}
-                      </Button>
-                    );
-                  })}
-              </ButtonWrapper>
+              <p>{t(greetings)}</p>
+              <Row><h6>{t(title)}</h6><span className="name">{t(name)}</span></Row>
+              <h6>{t(job)}</h6>
+              <Content><ContentStyling><span>{t(content)}</span></ContentStyling></Content>
             </ContentWrapper>
+            <SectionSocialMedia>
+              <SocialMedia/>
+            </SectionSocialMedia>
           </Col>
-          <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+          <Col lg={10} md={11} sm={12} xs={24}>  
+            <SvgIcon src={icon} width="100%" height="550px" />
           </Col>
         </Row>
       </Fade>

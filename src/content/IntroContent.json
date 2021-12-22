@@ -1,13 +1,7 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
-  "button": [
-    {
-      "title": "Explore"
-    },
-    {
-      "title": "Learn more",
-      "color": "#fff"
-    }
-  ]
+  "greetings" : "WELCOME TO MY WORLD",
+  "title": "Hi, I’m",
+  "name": "Jhon Lee",
+  "job": "a proffesional coder",
+  "text": "I use animation as a third dimension by which to simplify experiences and kuiding thro each and every interaction. I’m not adding motion just to spruce things up, but doing it in ways that."
 }

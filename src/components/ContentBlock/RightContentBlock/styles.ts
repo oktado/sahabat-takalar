@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
+  padding: 10rem 0 8rem 0rem;
+  border-bottom: 1px solid black;
 
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
@@ -16,13 +17,20 @@ export const RightBlockContainer = styled("section")`
 export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
 `;
+export const ContentStyling = styled("span")`
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #c4cfde;
+`;
 
 export const ContentWrapper = styled("div")`
   position: relative;
-  max-width: 540px;
+  max-width: 706px;
 
   @media only screen and (max-width: 575px) {
-    padding-bottom: 4rem;
+    padding-bottom: 0rem;
   }
 `;
 
@@ -38,4 +46,22 @@ export const ButtonWrapper = styled("div")`
   button:last-child {
     margin-left: 20px;
   }
+`;
+export const SectionSocialMedia = styled("div")`
+  
+  margin-top: 200px;
+  
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+`;
+
+export const SvgResponsive = styled("img")`
+  
+  @media screen and (max-width: 768px) {
+   width:50%;
+  }
+
 `;

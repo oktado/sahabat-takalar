@@ -18,7 +18,7 @@ export const Styles = createGlobalStyle`
     body,
     html,
     a {
-        font-family: 'Motiva Sans Light', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
 
 
@@ -27,7 +27,7 @@ export const Styles = createGlobalStyle`
         padding:0;
         border: 0;
         outline: 0;
-        background: #fff;
+        background: #202020;
         overflow-x: hidden;
     }
 
@@ -57,10 +57,12 @@ export const Styles = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: 'Motiva Sans Bold', serif;
-        color: #18216d;
-        font-size: 56px;
+        font-family: 'Montserrat', sans-serif;
+        color: #ffffff;
+        font-size: 48px;
+        font-weight: bold;
         line-height: 1.18;
+        margin: 10px 0px;
 
         @media only screen and (max-width: 890px) {
           font-size: 47px;
@@ -72,9 +74,11 @@ export const Styles = createGlobalStyle`
     }
 
     p {
-        color: #18216d;
-        font-size: 21px;        
+        font-family: 'Montserrat', sans-serif;
+        color: #c4cfde;
+        font-size: 14px;        
         line-height: 1.41;
+        letter-spacing: 3px;
     }
 
     h1 {
@@ -104,6 +108,7 @@ export const Styles = createGlobalStyle`
         flex-direction: column;
         text-align: left;
         padding-top: 1.5rem;
+        background-color: #202020;
     }
 
     .ant-drawer-content-wrapper {

@@ -1,0 +1,13 @@
+.name {
+  color: red;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .name {
+    margin-left: 0;
+  }
+}
