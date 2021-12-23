@@ -18,7 +18,7 @@
 .container-card {
   height: 411px;
   width: 350px;
-  background: #1d1d1d;
+  background: linear-gradient(to right bottom, #212428, #16181c);
   -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
   box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
   border-radius: 20px;

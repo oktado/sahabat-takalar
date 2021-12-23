@@ -8,6 +8,7 @@ import ContactContent from "../../content/ContactContent.json";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
+const ProfileBlock = lazy(() => import("../../components/ProfileBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
@@ -38,7 +39,7 @@ const Home = () => {
         content={MultimediaContent.text}
         button={MultimediaContent.button}
       />
-       <MiddleBlock
+       <ProfileBlock
         header={ProfileContent.header}
         title={ProfileContent.title}
         content={ProfileContent.text}
