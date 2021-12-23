@@ -14,3 +14,42 @@
   font-weight: bold;
   letter-spacing: 0;
 }
+
+.container-card {
+  height: 411px;
+  width: 350px;
+  background: #1d1d1d;
+  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  border-radius: 20px;
+  padding: 25px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  -webkit-transition: background 0.9s ease-out;
+  -moz-transition: background 0.9s ease-out;
+  -o-transition: background 0.9s ease-out;
+  transition: background 0.9s;
+}
+
+.container-card:hover {
+  background-color: #161616;
+}
+
+.container-img {
+  overflow: hidden;
+  height: 248px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-card {
+  transition: transform 0.8s ease-out;
+}
+
+.img-card:hover {
+  transform: scale(1.1);
+}

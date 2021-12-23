@@ -1,7 +1,7 @@
 
-import { CardProps } from "../types";
-import { StyledCard } from "./styles";
-
+import { CardProps, } from "../types";
+import { CardWrapper } from "./styles";
+import { Fade } from "react-awesome-reveal";
 import './index.css'
 
 
@@ -13,9 +13,53 @@ export const CardNews = ({
     title,
     content,
   }: CardProps) => (
-    <StyledCard>
-        <img src={img} height="248px" width="100%" style={{borderRadius: "5px"}}/>
+    <>
+    <Fade >
+    <CardWrapper>
+    <div className="container-card">
+      <div className="container-img">
+      <img className='img-card' src={img} height="248px" width="100%" />
+      </div>
         <p className='title-card'>{title}</p>
         <p className='header-card'>{header}</p>
-    </StyledCard>
+    </div>
+
+    <div className="container-card">
+      <div className="container-img">
+      <img className='img-card' src={img} height="248px" width="100%" />
+      </div>
+        <p className='title-card'>{title}</p>
+        <p className='header-card'>{header}</p>
+    </div>
+    <div className="container-card">
+      <div className="container-img">
+      <img className='img-card' src={img} height="248px" width="100%" />
+      </div>
+        <p className='title-card'>{title}</p>
+        <p className='header-card'>{header}</p>
+    </div>
+    <div className="container-card">
+      <div className="container-img">
+      <img className='img-card' src={img} height="248px" width="100%" />
+      </div>
+        <p className='title-card'>{title}</p>
+        <p className='header-card'>{header}</p>
+    </div>
+    <div className="container-card">
+      <div className="container-img">
+      <img className='img-card' src={img} height="248px" width="100%" />
+      </div>
+        <p className='title-card'>{title}</p>
+        <p className='header-card'>{header}</p>
+    </div>
+    <div className="container-card">
+      <div className="container-img">
+      <img className='img-card' src={img} height="248px" width="100%" />
+      </div>
+        <p className='title-card'>{title}</p>
+        <p className='header-card'>{header}</p>
+    </div>
+    </CardWrapper>
+    </Fade>
+    </>
   );

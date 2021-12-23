@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
-import { MiddleBlockSection,ContentWrapper,CardWrapper } from "./styles";
+import { MiddleBlockSection,ContentWrapper } from "./styles";
 
 import CardContent from "../../content/CardContent.json";
 
@@ -22,22 +22,16 @@ const MiddleBlock = ({ title, content, button, t,header }: MiddleBlockProps) => 
  
   return (
     <>
-    <MiddleBlockSection>
-      <Slide direction="up">
+    <MiddleBlockSection>  
+    <Slide direction="up">
           <ContentWrapper>
               <p className='header-title'>{t(header)}</p>
               <h6>{t(title)}</h6>
-          </ContentWrapper>
-          <CardWrapper>
+        </ContentWrapper>
+        </Slide>
      <CardNews header={CardContent.header} title={CardContent.title} img={CardContent.img} content={CardContent.content}/>
-     <CardNews header={CardContent.header} title={CardContent.title} img={CardContent.img} content={CardContent.content}/>
-     <CardNews header={CardContent.header} title={CardContent.title} img={CardContent.img} content={CardContent.content}/>
-     <CardNews header={CardContent.header} title={CardContent.title} img={CardContent.img} content={CardContent.content}/>
-     <CardNews header={CardContent.header} title={CardContent.title} img={CardContent.img} content={CardContent.content}/>
-     </CardWrapper>
-    </Slide>
     </MiddleBlockSection>
-   
+    
      </>
   );
 };
