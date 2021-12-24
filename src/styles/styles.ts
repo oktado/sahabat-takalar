@@ -81,6 +81,11 @@ export const Styles = createGlobalStyle`
         letter-spacing: 3px;
     }
 
+    span {
+        color: #c4cfde;
+      
+    }
+
     h1 {
         font-weight: 600;
     }

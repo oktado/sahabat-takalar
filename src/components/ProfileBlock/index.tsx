@@ -4,6 +4,7 @@ import { Slide } from "react-awesome-reveal";
 import { MiddleBlockSection,ContentWrapper } from "./styles";
 
 import {TimeLine} from '../../common/TimeLine'
+import {ButtonProfile} from '../../common/ButtonProfile'
 
 import './index.css';
 
@@ -27,7 +28,9 @@ const ProfileBlock = ({ title, content, button, t,header }: MiddleBlockProps) =>
               <h6>{t(title)}</h6>
         </ContentWrapper>
         </Slide>
+        <ButtonProfile/>
     <TimeLine/>
+    
     </MiddleBlockSection>
     
      </>
