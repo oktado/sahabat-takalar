@@ -2,10 +2,10 @@ import {useState} from "react";
 import './index.css'
 
 export const ButtonProfile = () => {
-   const [isHover,setIsHover] = useState("")
-   const [isActive,setIsActive] = useState("")
+   const [isHover,setIsHover] = useState("Education")
+   const [isActive,setIsActive] = useState("Education")
 
-   const menuProfile = ["Education","Professional Skills"]
+   const menuProfile = ["Education","Professional Skills","Achievment"]
     
     return (
 
@@ -19,6 +19,5 @@ export const ButtonProfile = () => {
         } )}
         </div>
     )
-   
     };
   
