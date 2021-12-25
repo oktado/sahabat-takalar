@@ -11,3 +11,10 @@
     margin-left: 0;
   }
 }
+
+@media screen and (max-width: 415px) {
+  .name {
+    margin-left: 20px;
+    font-size: 40px;
+  }
+}
