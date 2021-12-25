@@ -3,38 +3,36 @@ import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { MiddleBlockSection,ContentWrapper } from "./styles";
 
-import {TimeLine} from '../../common/TimeLine'
-import {ButtonProfile} from '../../common/ButtonProfile'
+import {MitraButton} from '../../common/MitraButton'
+
 
 import './index.css';
 
 
-interface MiddleBlockProps {
+interface MitraBlockProps {
   title: string;
   header: string,
   content?: string;
-  button: string;
+  button?: string;
   t: any;
 }
 
-const ProfileBlock = ({ title, content, button, t,header }: MiddleBlockProps) => {
+const MitraBlock = ({ title, content, button, t,header }: MitraBlockProps) => {
  
   return (
     <>
     <MiddleBlockSection>  
-    <Slide direction="up">
+      <Slide direction="up">
           <ContentWrapper>
               <p className='header-title'>{t(header)}</p>
               <h6>{t(title)}</h6>
-        </ContentWrapper>
-        </Slide>
-        <ButtonProfile/>
-        <TimeLine/>
-    
+          </ContentWrapper>
+          <MitraButton/>
+      </Slide>
     </MiddleBlockSection>
     
      </>
   );
 };
 
-export default withTranslation()(ProfileBlock);
+export default withTranslation()(MitraBlock);

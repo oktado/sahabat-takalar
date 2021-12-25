@@ -1,0 +1,114 @@
+.container-mitra {
+  padding: 100px 0;
+}
+
+.container-mitra-menu {
+}
+
+.mitra-menu {
+  padding: 30px 10px;
+  background: linear-gradient(to right bottom, #202020, #202025);
+  box-shadow: 12px 12px 24px #1e1e1e, -12px -12px 24px #222222;
+  width: 391px;
+  height: 90px;
+  cursor: pointer;
+  transition: 0.6s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.mitra-menu-active {
+  background: linear-gradient(to right bottom, #202020, #202025);
+  box-shadow: 13px 13px 36px #1a1a1a, -13px -13px 36px #262626;
+  border-radius: 10px;
+  z-index: 99999;
+  transition: 0.6s;
+  padding: 30px 10px;
+  width: 391px;
+  height: 90px;
+  cursor: pointer;
+  transition: 0.6s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.mitra-name,
+.mitra-name-hover {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  transition: 0.6s;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.mitra-name-hover {
+  color: #f9004d;
+  font-size: 18px;
+  transition: 0.6s;
+}
+
+.container-mitra-logo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.mitra-logo:hover {
+  background: #212428;
+  box-shadow: 16px 16px 42px #171515, -16px -16px 42px #232121;
+  border-radius: 10px;
+  z-index: 9999;
+  transition: 0.6s;
+  padding: 10px 10px;
+  width: 280px;
+  height: 209px;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.mitra-logo {
+  padding: 30px 10px;
+  background: #202020;
+  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
+  width: 280px;
+  height: 209px;
+  cursor: pointer;
+  transition: 0.6s;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 0px 20px 20px;
+}
+
+.thumbnail {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  align-items: center;
+}
+
+.thumbnail-name {
+  height: 20%;
+  padding: 10px;
+  color: #7c838e;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-mitra {
+  width: 90px;
+  height: 90px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-mitra-menu {
+    margin-bottom: 75px;
+  }
+}

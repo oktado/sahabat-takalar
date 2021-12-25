@@ -3,12 +3,13 @@ import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import MultimediaContent from "../../content/MultimediaContent.json";
 import ProfileContent from "../../content/ProfileContent.json";
-import ProductContent from "../../content/ProductContent.json";
+import MitraContent from "../../content/MitraContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const ProfileBlock = lazy(() => import("../../components/ProfileBlock"));
+const MitraBlock = lazy(() => import("../../components/MitraBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
@@ -45,12 +46,10 @@ const Home = () => {
         content={ProfileContent.text}
         button={ProfileContent.button}
       />
-      <ContentBlock
-        type="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
+      <MitraBlock
+        title={MitraContent.title}
+        content={MitraContent.text}
+        header={MitraContent.header}
       />
       <Contact
         title={ContactContent.title}
