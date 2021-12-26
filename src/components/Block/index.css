@@ -1,0 +1,28 @@
+.container-img-contact {
+  background-color: #bdbdbd;
+  width: 100%;
+  height: 288px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 29px;
+  font-weight: bold;
+  letter-spacing: 0;
+  color: #e4e6ea;
+  margin-bottom: 15px;
+}
+.contact-job,
+.contact-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #878e99;
+}
+
+.container-text-contact {
+  margin-bottom: 50px;
+}

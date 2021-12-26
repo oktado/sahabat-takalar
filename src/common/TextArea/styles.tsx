@@ -17,4 +17,7 @@ export const Label = styled("label")`
   display: block;
   padding-bottom: 10px;
   text-transform: capitalize;
+  color: #e4e6ea;
+  font-family: "Montserrat",sans-serif;
+  font-size:12px;
 `;

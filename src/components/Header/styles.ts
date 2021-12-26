@@ -8,7 +8,7 @@ export const HeaderSection = styled("header")`
   background-color:#202020;
   height: 90px;
   position: fixed;
-  left:0;
+  left: 0px;
   z-index:999999;
  }
  

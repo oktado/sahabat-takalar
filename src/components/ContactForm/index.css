@@ -1,0 +1,14 @@
+.container-form-contact {
+  background: #212121;
+  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
+  border-radius: 15px;
+  height: 771px;
+  padding: 30px;
+  width: 700px;
+}
+
+/* .input-contact {
+  padding: 0 15px;
+  box-sizing: border-box;
+} */
