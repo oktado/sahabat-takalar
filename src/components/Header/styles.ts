@@ -10,6 +10,7 @@ export const HeaderSection = styled("header")`
   position: fixed;
   left: 0px;
   z-index:999999;
+  width:100%;
  }
  
   @media only screen and (max-width: 411px) {

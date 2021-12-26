@@ -22,11 +22,10 @@
 
 .text-logo {
   color: #c4cfde;
-  margin-right: 120px;
+  margin-right: 0px;
   margin-top: 12px;
   font-weight: 700;
   letter-spacing: 0.6px;
-  margin-left: 10px;
 }
 
 .anticon svg {
@@ -35,10 +34,10 @@
 
 @media screen and (min-width: 414px) {
   .text-logo {
-    font-size: smaller;
+    font-size: small;
     left: 50px;
     margin-right: 120px;
-    width: 100px;
+    width: 150px;
   }
 }
 
@@ -46,7 +45,7 @@
   .text-logo {
     font-size: small;
     position: absolute;
-    left: 75px;
+    left: 85px;
     width: fit-content;
   }
 

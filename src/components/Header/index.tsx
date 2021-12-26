@@ -72,7 +72,7 @@ const Header = ({ t }: any) => {
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
+        <Row justify="space-between" >
           <LogoContainer to="/" aria-label="homepage">
             <div className='profile-picture'></div>
           </LogoContainer>
