@@ -12,11 +12,12 @@ export const CardNews = ({
     header,
     title,
     content,
+    showModalContent
   }: CardProps) => (
     <>
     <Fade triggerOnce={true} >
-    <CardWrapper>
-    <div className="container-card">
+    <CardWrapper onClick={showModalContent} >
+    <div className="container-card" >
       <div className="container-img">
       <img className='img-card' src={img} height="248px" width="100%" />
       </div>

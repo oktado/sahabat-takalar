@@ -41,4 +41,5 @@ export interface CardProps {
   title: string;
   header: string;
   content?: string;
+  showModalContent?: () => void;
 }

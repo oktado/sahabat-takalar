@@ -1,0 +1,55 @@
+.container-modal {
+  background-color: #202020;
+}
+
+.ant-modal {
+  border-radius: 20px;
+  background-color: #202020;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.ant-modal-body {
+  background-color: #202020;
+  padding: 0;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.ant-modal-content {
+  background-color: #202020;
+}
+
+.container-img-modal {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.img-modal {
+  width: 100%;
+  height: 400px;
+}
+
+.date {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #c4cfde;
+  letter-spacing: 0;
+}
+
+.title-modal {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  color: #c4cfde;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.text-modal {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #878e99;
+  letter-spacing: 0;
+}
