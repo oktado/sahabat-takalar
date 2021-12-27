@@ -1,9 +1,10 @@
-
+import { useState } from "react";
 import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { MiddleBlockSection,ContentWrapper } from "./styles";
 
 import {MitraButton} from '../../common/MitraButton'
+import ModalMitra  from '../../common/ModalMitra'
 
 
 import './index.css';
@@ -18,7 +19,7 @@ interface MitraBlockProps {
 }
 
 const MitraBlock = ({ title, content, button, t,header }: MitraBlockProps) => {
- 
+  const [visibleModalMitra, setVisibleModalMitra] = useState(false);
   return (
     <>
     <MiddleBlockSection>  
@@ -28,7 +29,8 @@ const MitraBlock = ({ title, content, button, t,header }: MitraBlockProps) => {
               <h6>{t(title)}</h6>
           </ContentWrapper>
       </Slide>
-        <MitraButton/>
+        <MitraButton openModalMitra={() => setVisibleModalMitra(true)} />
+        <ModalMitra closeModalMitra={() => setVisibleModalMitra(false)} visibleModalMitra={visibleModalMitra}/>
     </MiddleBlockSection>
     
      </>

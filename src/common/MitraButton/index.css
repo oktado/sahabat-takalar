@@ -2,9 +2,6 @@
   padding: 100px 0;
 }
 
-.container-mitra-menu {
-}
-
 .mitra-menu {
   padding: 30px 10px;
   background: linear-gradient(to right bottom, #202020, #202025);
@@ -110,5 +107,9 @@
 @media only screen and (max-width: 768px) {
   .container-mitra-menu {
     margin-bottom: 75px;
+  }
+
+  .mitra-logo {
+    width: 450px;
   }
 }

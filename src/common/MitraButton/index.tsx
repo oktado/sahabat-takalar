@@ -69,7 +69,12 @@ const mitraData = [
 ];
 
 
-export const MitraButton = () =>  {
+interface MitraButtonProps {
+    openModalMitra: () => void;
+  }
+
+
+export const MitraButton = ({openModalMitra}:MitraButtonProps) =>  {
     const [isHover,setIsHover] = useState("Community")
    const [isActive,setIsActive] = useState("Community")
    return (
@@ -89,43 +94,7 @@ export const MitraButton = () =>  {
                         </Col>
                         <Col sm={24} xs={24} lg={16} xl={16}>
                             <div className='container-mitra-logo'>
-                                <div className="mitra-logo">
-                                   <div className='thumbnail'>
-                                       <img className="img-mitra" src='img/icons/logo192.png' />
-                                   </div>
-                                    <div className='thumbnail-name'>Name</div>
-                                </div>
-                                <div className="mitra-logo">
-                                   <div className='thumbnail'>
-                                       <img className="img-mitra" src='img/icons/logo192.png' />
-                                   </div>
-                                    <div className='thumbnail-name'>Name</div>
-                                </div>
-                                <div className="mitra-logo">
-                                   <div className='thumbnail'>
-                                       <img className="img-mitra" src='img/icons/logo192.png' />
-                                   </div>
-                                    <div className='thumbnail-name'>Name</div>
-                                </div>
-                                <div className="mitra-logo">
-                                   <div className='thumbnail'>
-                                       <img className="img-mitra" src='img/icons/logo192.png' />
-                                   </div>
-                                    <div className='thumbnail-name'>Name</div>
-                                </div>
-                                <div className="mitra-logo">
-                                   <div className='thumbnail'>
-                                       <img className="img-mitra" src='img/icons/logo192.png' />
-                                   </div>
-                                    <div className='thumbnail-name'>Name</div>
-                                </div>
-                                <div className="mitra-logo">
-                                   <div className='thumbnail'>
-                                       <img className="img-mitra" src='img/icons/logo192.png' />
-                                   </div>
-                                    <div className='thumbnail-name'>Name</div>
-                                </div>
-                                <div className="mitra-logo">
+                                <div className="mitra-logo"  onClick={openModalMitra}>
                                    <div className='thumbnail'>
                                        <img className="img-mitra" src='img/icons/logo192.png' />
                                    </div>
