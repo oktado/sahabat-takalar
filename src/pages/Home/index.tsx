@@ -6,7 +6,7 @@ import ProfileContent from "../../content/ProfileContent.json";
 import MitraContent from "../../content/MitraContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
-const Contact = lazy(() => import("../../components/ContactForm"));
+const ContactBlock = lazy(() => import("../../components/ContactBlock"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const ProfileBlock = lazy(() => import("../../components/ProfileBlock"));
 const MitraBlock = lazy(() => import("../../components/MitraBlock"));
@@ -51,10 +51,10 @@ const Home = () => {
         content={MitraContent.text}
         header={MitraContent.header}
       />
-      <Contact
+      <ContactBlock
         title={ContactContent.title}
         content={ContactContent.text}
-        id="contact"
+        header={ContactContent.header}
       />
     </Container>
   );

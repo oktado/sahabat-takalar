@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
-import { ContactProps, ValidationTypeProps } from "./types";
+import {  ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
 import validate from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
@@ -13,7 +13,7 @@ import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 import "./index.css"
 
-const Contact = ({ title, content, id, t }: ContactProps) => {
+const ContactForm = () => {
   const { values, errors, handleChange, handleSubmit } = useForm(
     validate
   ) as any;
@@ -28,11 +28,11 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
   };
 
   return (
-    <ContactContainer id={id}>
+    <ContactContainer>
       <Row justify="space-between" align="middle">
         <Col lg={10} md={11} sm={24} xs={24}>
           <Slide direction="left">
-            <Block title={title} content={content} />
+            <Block/>
           </Slide>
         </Col>
         <Col lg={14} md={12} sm={24} xs={24}>
@@ -81,7 +81,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <Button name="submit">SUBMIT</Button>
               </ButtonContainer>
             </FormGroup>
            </div>
@@ -92,4 +92,4 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
   );
 };
 
-export default withTranslation()(Contact);
+export default withTranslation()(ContactForm);
