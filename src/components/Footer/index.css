@@ -1,0 +1,39 @@
+.copyright-footer,
+.logo-footer {
+  margin: auto;
+}
+
+.logo-footer {
+  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-footer img {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.logo-footer span {
+  font-family: #c4cfde;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.copyright {
+  font-family: "Poppins", sans-serif;
+  color: #878e99;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .copyright {
+    font-size: 12px;
+  }
+}
