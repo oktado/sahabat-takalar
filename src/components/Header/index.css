@@ -32,6 +32,24 @@
   fill: #ffff;
 }
 
+.profile-picture img {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-picture img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btn-nav-login {
+    margin-left: 50px;
+  }
+}
+
 @media screen and (min-width: 414px) {
   .text-logo {
     font-size: small;
@@ -42,6 +60,30 @@
 }
 
 @media only screen and (max-width: 411px) {
+  .text-logo {
+    font-size: small;
+    position: absolute;
+    left: 85px;
+    width: fit-content;
+  }
+
+  .btn-nav-login {
+    background: linear-gradient(145deg, #202020, #272727);
+    box-shadow: 19px 19px 38px #171717, -19px -19px 38px #313131;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    border-radius: 10px;
+    padding: 13px 0;
+    cursor: pointer;
+    margin-top: 0.625rem;
+    max-width: 180px;
+    transition: all 0.3s ease-in-out;
+    color: red;
+  }
+}
+
+@media only screen and (max-width: 376px) {
   .text-logo {
     font-size: small;
     position: absolute;
