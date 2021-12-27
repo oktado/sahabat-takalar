@@ -8,6 +8,13 @@
   width: 700px;
 }
 
+@media only screen and (max-width: 768px) {
+  .container-form-contact {
+    width: 365px;
+    height: 700px;
+  }
+}
+
 /* .input-contact {
   padding: 0 15px;
   box-sizing: border-box;

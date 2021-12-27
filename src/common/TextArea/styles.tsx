@@ -11,6 +11,12 @@ export const StyledTextArea = styled("textarea")`
   resize: none;
   font-size: 0.875rem;
   height: 185px;
+  background:#191b1e;
+  border: 2px solid #191b1e;
+  box-shadow: inset 6px 6px 12px #121315,
+            inset -6px -6px 12px #212327;
+  border-radius:10px;
+  color: #e4e6ea;
 `;
 
 export const Label = styled("label")`
@@ -21,3 +27,5 @@ export const Label = styled("label")`
   font-family: "Montserrat",sans-serif;
   font-size:12px;
 `;
+
+

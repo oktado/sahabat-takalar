@@ -5,7 +5,13 @@ export const ContactContainer = styled("div")`
 
   @media only screen and (max-width: 1024px) {
     padding: 3rem 0;
+    width: 365px;
   }
+
+  @media only screen and (max-width: 768px) {
+    width: 365px;
+  }
+
 `;
 
 export const FormGroup = styled("form")`

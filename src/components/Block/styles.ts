@@ -14,6 +14,13 @@ export const Container = styled("div")`
   box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
   margin-right: 50px;
   border-radius: 15px;
+
+  @media only screen and (max-width: 768px) {
+    width: 365px;
+    margin-top: 2rem;
+    margin-bottom: 50px;
+  }
+
 `;
 
 export const TextWrapper = styled("div")`

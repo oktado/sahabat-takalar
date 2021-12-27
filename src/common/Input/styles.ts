@@ -13,4 +13,5 @@ export const StyledInput = styled("input")`
   box-shadow: inset 6px 6px 12px #121315,
             inset -6px -6px 12px #212327;
   border-radius:10px;
+  color: #e4e6ea;
 `;
