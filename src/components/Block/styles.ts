@@ -21,6 +21,11 @@ export const Container = styled("div")`
     margin-bottom: 50px;
   }
 
+  @media only screen and (max-width: 376px) {
+    width: 325px;
+    height: 775px;
+}
+
 `;
 
 export const TextWrapper = styled("div")`
