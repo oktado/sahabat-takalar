@@ -32,7 +32,7 @@ const RightBlock = ({
 }: ContentBlockProps) => {
   return (
     <RightBlockContainer>
-      <Fade direction="right">
+      <Fade direction="right" triggerOnce={true}>
         <Row justify="space-between" align="top" id={id}>
           <Col lg={12} md={11} sm={11} xs={24}>
             <ContentWrapper>

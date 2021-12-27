@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Fade} from 'react-awesome-reveal'
 import './index.css'
 
 export const ButtonProfile = () => {
@@ -8,7 +9,7 @@ export const ButtonProfile = () => {
    const menuProfile = ["Education","Professional Skills","Achievment"]
     
     return (
-
+        <Fade triggerOnce={true}>
         <div className="container-btn-profile">
         {menuProfile.map((menu,index) => {
             return(
@@ -18,6 +19,7 @@ export const ButtonProfile = () => {
             )
         } )}
         </div>
+        </Fade>
     )
     };
   

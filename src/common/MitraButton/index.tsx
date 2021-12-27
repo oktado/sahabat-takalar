@@ -73,7 +73,7 @@ export const MitraButton = () =>  {
     const [isHover,setIsHover] = useState("Community")
    const [isActive,setIsActive] = useState("Community")
    return (
-        <Fade>
+        <Fade triggerOnce={true}>
             <div className='container-mitra'>
                 <Row gutter={24}>
                         <Col sm={24} xs={24} lg={8} xl={8}>

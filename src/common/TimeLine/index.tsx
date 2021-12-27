@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {Fade} from 'react-awesome-reveal'
 
 import './index.css'
 
@@ -8,7 +9,7 @@ import './index.css'
 export const TimeLine = () => {
   const [isHover,setIsHover] = useState("")
   return(
-    <>
+    <Fade triggerOnce={true}>
         <div className="container-timeline" >
       <div className='circle-icon' ></div>
       <div className='line' ></div>
@@ -39,7 +40,7 @@ export const TimeLine = () => {
         <p className='timeline-content'>Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.</p>
       </div>
         </div>
-    </>
+    </Fade>
   )
   
 };

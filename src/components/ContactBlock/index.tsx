@@ -24,7 +24,7 @@ const ContactBlock = ({ title, content, button, t,header }: ContactBlockProps) =
   return (
     <>
     <MiddleBlockSection>  
-      <Slide direction="up">
+      <Slide direction="up" triggerOnce={true}>
           <div className='title-contact'>
              <div className="container-title-contact">
              <p className='header-title'>{t(header)}</p>

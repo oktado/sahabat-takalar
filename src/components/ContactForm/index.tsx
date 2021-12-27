@@ -31,12 +31,12 @@ const ContactForm = () => {
     <ContactContainer>
       <Row justify="space-between" align="middle">
         <Col lg={10} md={11} sm={24} xs={24}>
-          <Slide direction="left">
+          <Slide direction="left" triggerOnce={true}>
             <Block/>
           </Slide>
         </Col>
         <Col lg={14} md={12} sm={24} xs={24}>
-          <Slide direction="right">
+          <Slide direction="right" triggerOnce={true}>
            <div className="container-form-contact">
            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
               <Row>

@@ -23,7 +23,7 @@ const MiddleBlock = ({ title, content, button, t,header }: MiddleBlockProps) => 
   return (
     <>
     <MiddleBlockSection>  
-    <Slide direction="up">
+    <Slide direction="up" triggerOnce={true}>
           <ContentWrapper>
               <p className='header-title'>{t(header)}</p>
               <h6>{t(title)}</h6>

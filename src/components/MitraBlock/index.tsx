@@ -22,13 +22,13 @@ const MitraBlock = ({ title, content, button, t,header }: MitraBlockProps) => {
   return (
     <>
     <MiddleBlockSection>  
-      <Slide direction="up">
+      <Slide direction="up" triggerOnce={true}>
           <ContentWrapper>
               <p className='header-title'>{t(header)}</p>
               <h6>{t(title)}</h6>
           </ContentWrapper>
-          <MitraButton/>
       </Slide>
+        <MitraButton/>
     </MiddleBlockSection>
     
      </>

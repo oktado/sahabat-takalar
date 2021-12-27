@@ -14,7 +14,7 @@ export const CardNews = ({
     content,
   }: CardProps) => (
     <>
-    <Fade >
+    <Fade triggerOnce={true} >
     <CardWrapper>
     <div className="container-card">
       <div className="container-img">
