@@ -13,9 +13,13 @@ const MitraBlock = lazy(() => import("../../components/MitraBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const Header = lazy(() => import("../../components/Header"));
+const Footer = lazy(() => import("../../components/Footer"));
 
 const Home = () => {
   return (
+    <>
+    <Header/>
     <Container>
       <ScrollToTop />
       <ContentBlock
@@ -57,6 +61,8 @@ const Home = () => {
         header={ContactContent.header}
       />
     </Container>
+    <Footer/>
+    </>
   );
 };
 
