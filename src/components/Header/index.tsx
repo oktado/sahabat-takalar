@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { ButtonNavbar } from "../../common/ButtonNavbar";
+import ProfilePicture from '../../common/ProfilePicture'
 import {
   HeaderSection,
   LogoContainer,
@@ -73,10 +74,7 @@ const Header = ({ t }: any) => {
     <HeaderSection>
       <Container>
         <Row justify="space-between" >
-            <div className='profile-picture'>
-            <img src='img/svg/professional-man.jpg'/>
-            </div>
-          <span className="text-logo">SAHABAT TAKALAR</span>
+            <ProfilePicture src={'img/svg/professional-man.jpg'}/>
           <NotHidden>
             <MenuItem />
           </NotHidden>

@@ -20,53 +20,17 @@
   color: red;
 }
 
-.text-logo {
-  color: #c4cfde;
-  margin-right: 0px;
-  margin-top: 12px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-}
-
 .anticon svg {
   fill: #ffff;
 }
 
-.profile-picture img {
-  width: 75px;
-  height: 75px;
-  border-radius: 100%;
-  margin-top: 10px;
-}
-
 @media screen and (max-width: 768px) {
-  .profile-picture img {
-    width: 60px;
-    height: 60px;
-  }
-
   .btn-nav-login {
     margin-left: 50px;
   }
 }
 
-@media screen and (min-width: 414px) {
-  .text-logo {
-    font-size: small;
-    left: 50px;
-    margin-right: 120px;
-    width: 150px;
-  }
-}
-
 @media only screen and (max-width: 411px) {
-  .text-logo {
-    font-size: small;
-    position: absolute;
-    left: 85px;
-    width: fit-content;
-  }
-
   .btn-nav-login {
     background: linear-gradient(145deg, #202020, #272727);
     box-shadow: 19px 19px 38px #171717, -19px -19px 38px #313131;
@@ -84,13 +48,6 @@
 }
 
 @media only screen and (max-width: 376px) {
-  .text-logo {
-    font-size: small;
-    position: absolute;
-    left: 85px;
-    width: fit-content;
-  }
-
   .btn-nav-login {
     background: linear-gradient(145deg, #202020, #272727);
     box-shadow: 19px 19px 38px #171717, -19px -19px 38px #313131;

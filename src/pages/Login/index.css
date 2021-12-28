@@ -1,10 +1,8 @@
 .container-login-page {
   background-color: #202020;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100vh;
+  padding: 50px 0px;
 }
 
 .container-form-login {
@@ -15,4 +13,104 @@
   height: 350px;
   padding: 30px;
   width: 600px;
+}
+
+.container-btn-login {
+  display: flex;
+  justify-content: center;
+}
+
+.content-login-page {
+  display: block;
+}
+
+.container-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.container-form-login {
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container-login-page {
+    background-color: #202020;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 50px;
+  }
+
+  .container-form-login {
+    background: #212121;
+    -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+    box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
+    border-radius: 15px;
+    height: 350px;
+    padding: 30px;
+    width: 300px;
+  }
+
+  .container-btn-login {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-login-page {
+    display: block;
+    margin: auto;
+  }
+
+  .container-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .container-form-login {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .container-login-page {
+    background-color: #202020;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0px;
+  }
+
+  .container-form-login {
+    background: #212121;
+    -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+    box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
+    border-radius: 15px;
+    height: 350px;
+    padding: 30px;
+    width: 300px;
+  }
+
+  .container-btn-login {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-login-page {
+    display: block;
+    margin: auto;
+  }
+
+  .container-picture {
+    display: block;
+    margin: auto;
+  }
+
+  .container-form-login {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
 }
