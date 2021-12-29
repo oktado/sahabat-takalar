@@ -11,8 +11,8 @@ interface ProfilePictureProps {
         <>
         <div className='profile-picture'>
             <img src={src}/>
-            </div>
-          <span className="text-logo">SAHABAT TAKALAR</span>
+            <span className="text-logo">SAHABAT TAKALAR</span>
+        </div>
         </>
     )
 }

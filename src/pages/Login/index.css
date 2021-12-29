@@ -10,7 +10,7 @@
   -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
   box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
   border-radius: 15px;
-  height: 350px;
+  height: 400px;
   padding: 30px;
   width: 600px;
 }
@@ -28,11 +28,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .container-form-login {
   margin: auto;
+}
+
+.create-acount-text {
+  color: #c4cfdede;
+  font-family: "Montserrat", sans-serif;
+  font-size: smaller;
+  position: relative;
+  bottom: 60px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.5s;
+}
+
+.create-acount-text:hover {
+  color: #c4cfde;
+  transition: 0.5s;
+}
+
+.register-type {
+  cursor: pointer;
+}
+
+.register-type:hover {
+  color: #ff0606;
 }
 
 @media screen and (max-width: 768px) {
@@ -72,6 +96,17 @@
 
   .container-form-login {
     margin: auto;
+  }
+
+  .create-acount-text {
+    color: #c4cfde;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    position: relative;
+    bottom: 60px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-weight: bold;
   }
 }
 

@@ -9,6 +9,11 @@ const routes = [
     exact: true,
     component: "Login",
   },
+  {
+    path: ["/register"],
+    exact: true,
+    component: "Login",
+  },
 ];
 
 export default routes;

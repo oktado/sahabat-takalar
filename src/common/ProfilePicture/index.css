@@ -1,6 +1,6 @@
 .text-logo {
   color: #c4cfde;
-  margin-left: 15px;
+  margin-left: 10px;
   margin-top: 12px;
   font-weight: 700;
   letter-spacing: 0.6px;
@@ -25,13 +25,18 @@
     width: 60px;
     height: 60px;
   }
+
+  .text-logo {
+    width: fit-content;
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 414px) {
   .text-logo {
     font-size: small;
     left: 50px;
-    margin-right: 120px;
+    margin-left: 5px;
     width: 150px;
   }
 }
@@ -39,17 +44,14 @@
 @media only screen and (max-width: 411px) {
   .text-logo {
     font-size: small;
-    position: absolute;
-    left: 85px;
     width: fit-content;
+    margin-left: 5px;
   }
 }
 
 @media only screen and (max-width: 376px) {
   .text-logo {
     font-size: small;
-    position: absolute;
-    left: 85px;
     width: fit-content;
   }
 }

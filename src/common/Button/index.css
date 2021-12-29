@@ -17,7 +17,6 @@
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   transition: all 0.3s ease-in-out;
-  color: red;
 }
 
 .text-logo {
