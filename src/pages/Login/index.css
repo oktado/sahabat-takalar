@@ -10,9 +10,11 @@
   -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
   box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
   border-radius: 15px;
-  height: 400px;
+  height: fit-content;
   padding: 30px;
   width: 600px;
+  margin-bottom: 50px;
+  margin: auto;
 }
 
 .container-btn-login {
@@ -29,10 +31,6 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-}
-
-.container-form-login {
-  margin: auto;
 }
 
 .create-acount-text {
@@ -59,6 +57,10 @@
   color: #ff0606;
 }
 
+.container-select {
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .container-login-page {
     background-color: #202020;
@@ -72,7 +74,7 @@
     -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
     box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
     border-radius: 15px;
-    height: 350px;
+    height: auto;
     padding: 30px;
     width: 300px;
   }
@@ -103,10 +105,14 @@
     font-family: "Montserrat", sans-serif;
     font-size: 9px;
     position: relative;
-    bottom: 60px;
+    bottom: 75px;
     cursor: pointer;
     transition: 0.8s;
     font-weight: bold;
+  }
+
+  .container-select {
+    width: 100%;
   }
 }
 
