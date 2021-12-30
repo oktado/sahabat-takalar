@@ -16,6 +16,7 @@ export const StyledCard = styled("div")<any>`
 
 export const CardWrapper = styled("div")`
 display: flex;
+justify-content:center;
 flex-wrap: wrap;
 margin-top: 75px;
   @media only screen and (max-width: 768px) {

@@ -172,6 +172,7 @@ const Login = (props : LoginProps) => {
                 <Button>{props.location.pathname === "/login" ? "LOGIN" : "SUBMIT"}</Button>
             </div>
             <span className="create-acount-text" onClick={() => history.push(props.location.pathname === "/login" ? "/register" : "/login")}>{props.location.pathname === "/login" ? "Create Account" : "Already have account?"}</span>
+            {/* <span className="forgot-password-text">{props.location.pathname === "/login" ? "Forgot Password" : null}</span> */}
         </div>
        </div>
     </div>
