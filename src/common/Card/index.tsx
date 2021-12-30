@@ -23,8 +23,19 @@ export const CardNews = ({
     showModalContent
   }: CardProps) => {
     const [dataSource,setDataSource] = useState([]);
-    const [totalPages,setTotalPages] = useState(1);
+    const [totalPages,setTotalPages] = useState(0);
     const [loading,setLoading] = useState(false);
+    const [current,setCurrent] = useState(1);
+    const [minIndex,setMinIndex] = useState(0);
+    const [maxIndex,setMaxIndex] = useState(0);
+
+    const pageSize = 6;
+
+    const handlePagination = (page) => {
+      setCurrent(page);
+      setMinIndex((page-1)*pageSize);
+      setMaxIndex(page*pageSize)
+    }
 
 
     useEffect(() => {
@@ -59,8 +70,8 @@ export const CardNews = ({
       }) }
      
       </CardWrapper>
-      <div className='m-auto'>
-        <Pagination/>
+      <div className='container-pagination'>
+        <Pagination pageSize={pageSize} current={current} total={dataSource.length} onChange={handlePagination}/>
       </div>
       </Fade>
     </>

@@ -72,7 +72,7 @@ const Login = (props : LoginProps) => {
     <div className="container-login-page">
        <div className="content-login-page">
            <div className="container-picture">
-            <ProfilePicture src={'img/svg/professional-man.jpg'}/>
+            <ProfilePicture src={'img/svg/takalar-logo.png'}/>
            </div>
             <div className='container-form-login' >
             {props.location.pathname === "/login" ?  <div>

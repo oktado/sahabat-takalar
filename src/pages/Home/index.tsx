@@ -29,7 +29,7 @@ const Home = () => {
         content={IntroContent.text}
         job={IntroContent.job}
         name={IntroContent.name}
-        icon="professional-man.jpg"
+        icon="takalar-profile.png"
         id="intro"
       />
       <MiddleBlock

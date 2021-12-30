@@ -74,7 +74,7 @@ const Header = ({ t }: any) => {
     <HeaderSection>
       <Container>
         <Row justify="space-between" >
-            <ProfilePicture src={'img/svg/professional-man.jpg'}/>
+            <ProfilePicture src={'img/svg/takalar-logo.png'}/>
           <NotHidden>
             <MenuItem />
           </NotHidden>

@@ -33,7 +33,7 @@ return(
   className='container-modal'
 >
 <div className='container-img-modal'>
-    <img className="img-modal" src='img/icons/logo192.png' />
+    <img className="img-modal" src='img/svg/takalar-logo.png' />
 </div>
 <div className='container-text-modal'>
 <p className='date'>March 2, 2022</p>

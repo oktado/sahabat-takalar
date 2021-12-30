@@ -27,7 +27,7 @@ return(
 <Row>
   <Col xl={11} lg={11} md={11} sm={24} xs={24} >
   <div className='container-img-modal-mitra'>
-    <img className="img-modal-mitra" src='img/icons/logo192.png' />
+    <img className="img-modal-mitra" src='img/svg/takalar-logo.png' />
   </div>
   </Col>
   <Col  xl={13} lg={13} md={13} sm={24} xs={24}>

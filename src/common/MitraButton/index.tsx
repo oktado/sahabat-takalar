@@ -96,7 +96,7 @@ export const MitraButton = ({openModalMitra}:MitraButtonProps) =>  {
                             <div className='container-mitra-logo'>
                                 <div className="mitra-logo"  onClick={openModalMitra}>
                                    <div className='thumbnail'>
-                                       <img className="img-mitra" src='img/icons/logo192.png' />
+                                       <img className="img-mitra" src='img/icons/takalar-logo.png' />
                                    </div>
                                     <div className='thumbnail-name'>Name</div>
                                 </div>
