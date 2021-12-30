@@ -13,8 +13,7 @@ interface Props {
 const Block = ({ title, content, t }: Props) => {
   return (
     <Container>
-      <div className="container-img-contact">
-      </div>
+     <img className="container-img-contact" src={'img/svg/takalar-logo.png'}/>
      <div className="container-text-contact">
      <p className="contact-name">Nevine Acotanza</p>
       <p className="contact-job">Chief Operating Officer</p>
