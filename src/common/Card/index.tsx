@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react'
-import {Row,Col,Pagination} from 'antd'
+import {Row,Col,Button} from 'antd'
+import ReactPaginate from 'react-paginate';
 import { CardProps, } from "../types";
 import { CardWrapper } from "./styles";
 import { Fade } from "react-awesome-reveal";
@@ -23,55 +24,57 @@ export const CardNews = ({
     showModalContent
   }: CardProps) => {
     const [dataSource,setDataSource] = useState([]);
-    const [totalPages,setTotalPages] = useState(0);
-    const [loading,setLoading] = useState(false);
-    const [current,setCurrent] = useState(1);
-    const [minIndex,setMinIndex] = useState(0);
-    const [maxIndex,setMaxIndex] = useState(0);
+    const [offset, setOffset] = useState(0);
+    const [pageCount, setPageCount] = useState(0)
+    const [pageSize,setPageSize] = useState(3);
 
-    const pageSize = 6;
+  const fetchData = async() => {
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/albums/1/photos`)
+    const dataSource = res.data;
+    const slice = dataSource.slice(offset, offset + pageSize)
+    const postData = slice.map(pd => 
+      <div className="container-card">
+        <div className="container-img">
+          <img className='img-card' src={pd.url} height="248px" width="100%" />
+        </div>
+          <p className='title-card'>{pd.title}</p>
+          <p className='header-card'>{pd.title}</p>
+      </div>)
+    setDataSource(postData)
+    setPageCount(Math.ceil(dataSource.length / pageSize))                 
+}
 
-    const handlePagination = (page) => {
-      setCurrent(page);
-      setMinIndex((page-1)*pageSize);
-      setMaxIndex(page*pageSize)
-    }
-
-
+const handlePageClick = (e) => {
+  const selectedPage = e.selected;
+  setOffset(selectedPage + 1)  
+};
     useEffect(() => {
       fetchData();
-    },[])
-
-    const fetchData = () => {
-      setLoading(true)
-      axios.get('https://api.instantwebtools.net/v1/passenger?page=0&size=10')
-      .then((res) => {
-          setDataSource(res.data.data)
-          setTotalPages(res.data.totalPages)
-          setLoading(false)
-      })
-    }
-
+    },[offset,pageSize])
 
     return (
     <>
       <Fade triggerOnce={true} >
       <CardWrapper onClick={showModalContent} >
-      {dataSource.map((data) => {
-        return (
-          <div className="container-card" >
-        <div className="container-img">
-        <img className='img-card' src={img} height="248px" width="100%" />
-        </div>
-          <p className='title-card'>{data.name}</p>
-          <p className='header-card'>{data.trips}</p>
-         </div>
-        )
-      }) }
-     
+     {dataSource}
       </CardWrapper>
       <div className='container-pagination'>
-        <Pagination pageSize={pageSize} current={current} total={dataSource.length} onChange={handlePagination}/>
+        {pageSize !== 6 && <Button onClick={() => setPageSize(6)}>SHOW MORE</Button>}
+        {
+          pageSize === 6 &&
+          <ReactPaginate
+          previousLabel="Previous"
+          nextLabel="Next"
+          breakLabel="..."
+          breakClassName="break-me"
+          pageCount={pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
+          onPageChange={handlePageClick}
+          containerClassName='pagination'
+          subContainerClassName="pages pagination"
+          activeClassName="active"/>
+        }                         
       </div>
       </Fade>
     </>

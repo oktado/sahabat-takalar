@@ -37,9 +37,9 @@ export interface validateProps {
   email: string;
 }
 export interface CardProps {
-  img: string;
-  title: string;
-  header: string;
+  img?: string;
+  title?: string;
+  header?: string;
   content?: string;
   showModalContent?: () => void;
 }

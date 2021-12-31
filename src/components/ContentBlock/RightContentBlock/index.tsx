@@ -46,7 +46,7 @@ const RightBlock = ({
             </SectionSocialMedia>
           </Col>
           <Col lg={10} md={11} sm={12} xs={24}>  
-            <SvgIcon src={icon} width="100%" height="620px" />
+            <SvgIcon src={icon} width="98%" height="700px" />
           </Col>
         </Row>
       </Fade>

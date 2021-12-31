@@ -30,6 +30,7 @@
   -moz-transition: background 0.9s ease-out;
   -o-transition: background 0.9s ease-out;
   transition: background 0.9s;
+  overflow: hidden;
 }
 
 .container-card:hover {
@@ -57,11 +58,56 @@
 .container-pagination {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 50px;
+  background-color: transparent;
+}
+
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+.pagination > li > a {
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
 }
 
 @media only screen and (max-width: 768px) {
   .container-card {
     width: 390px;
+  }
+
+  .pagination > li > span,
+  a {
+    font-size: 11px;
   }
 }
