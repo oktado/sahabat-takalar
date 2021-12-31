@@ -22,6 +22,8 @@ const Login = (props : LoginProps) => {
 
     const [registerType,setRegisterType] = useState("")
     const typeRegister = ["Personal","Community"]
+    const [isHoverToggle,setIsHoverToggle] = useState("")
+    const [isActiveToggle,setIsActiveToggle] = useState("")
 
     const { values, errors, handleChange, handleSubmit } = useForm(
         validate
@@ -42,6 +44,9 @@ const Login = (props : LoginProps) => {
         { value: 'strawberry1', label: 'Strawberry1' },
         { value: 'vanilla1', label: 'Vanilla1' }
       ]
+
+
+      const ToggleOptions = ['Personal','Community']
 
 
       const customStyles = {
@@ -68,6 +73,15 @@ const Login = (props : LoginProps) => {
           }
       }
 
+
+      const ToggleRegister = ({menu,index}) => {
+          return (
+            <div key={index} className={`${isHoverToggle === menu || isActiveToggle === menu ? "btn-toggle-register-active" : "btn-toggle-register"}`} onMouseEnter={()=>setIsHoverToggle(menu)} onMouseLeave={() => setIsHoverToggle("")} onClick={()=>setIsActiveToggle(menu)}>
+            <span className={`${isHoverToggle === menu || isActiveToggle === menu ? "title-btn-register-toggle-hover" : "title-btn-register-toggle"}`}>{menu}</span>
+            </div>
+          )
+      }
+
   return (
     <div className="container-login-page">
        <div className="content-login-page">
@@ -92,15 +106,18 @@ const Login = (props : LoginProps) => {
                 onChange={handleChange}      
             />
             <ValidationType type="password" />
-            </div>:<div>
-                 <Row>
-                <span>Register as</span>
-            </Row>
+            </div>:
+            <div>
             <Row>
-               {typeRegister.map((type, index) => {
+                <span style={{color:"#e4e6ea"}}>Register as</span>
+            </Row>
+            <Row className='container-btn-toggle-register'>
+               {ToggleOptions.map((type, index) => {
                    return(
-                    <Col key={index} xl={3} lg={3} md={6} sm={6} xs={9}>
-                        <span className='register-type' style={{color: registerType === type ? "#ff0606" : "#c4cfde"}} onClick={() => setRegisterType(type)}>{type}</span>
+                    <Col xl={12} lg={12} md={12} sm={24} xs={24}>
+                        <div key={index} className={`${isHoverToggle === type || isActiveToggle === type ? "btn-toggle-register-active" : "btn-toggle-register"}`} onMouseEnter={()=>setIsHoverToggle(type)} onMouseLeave={() => setIsHoverToggle("")} onClick={()=>setIsActiveToggle(type)}>
+                            <span className={`${isHoverToggle === type || isActiveToggle === type ? "title-btn-register-toggle-hover" : "title-btn-register-toggle"}`}>{type}</span>
+                         </div>
                     </Col>
                    )
                })}
@@ -169,10 +186,9 @@ const Login = (props : LoginProps) => {
             
             </div>}
             <div className="container-btn-login">
-                <Button>{props.location.pathname === "/login" ? "LOGIN" : "SUBMIT"}</Button>
+                <div className='btn-submit-login'>{props.location.pathname === "/login" ? "LOGIN" : "SUBMIT"}</div>
             </div>
             <span className="create-acount-text" onClick={() => history.push(props.location.pathname === "/login" ? "/register" : "/login")}>{props.location.pathname === "/login" ? "Create Account" : "Already have account?"}</span>
-            {/* <span className="forgot-password-text">{props.location.pathname === "/login" ? "Forgot Password" : null}</span> */}
         </div>
        </div>
     </div>
