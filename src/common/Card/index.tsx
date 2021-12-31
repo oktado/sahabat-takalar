@@ -48,17 +48,10 @@ const handlePageClick = (e) => {
   const selectedPage = e.selected;
   setOffset(selectedPage + 1)  
 };
-const handleShowMoreButton = () => {
-  setPageSize(6)  
-};
+
     useEffect(() => {
       fetchData();
     },[offset,pageSize])
-
-
-    // useEffect(() => {
-    //   fetchData();
-    // },[pageSize])
 
     return (
     <>
@@ -67,7 +60,7 @@ const handleShowMoreButton = () => {
      {dataSource}
       </CardWrapper>
       <div className='container-pagination'>
-        {pageSize !== 6 && <div className='btn-show-more' onClick={() => handleShowMoreButton()}>SHOW MORE</div>}
+        {pageSize !== 6 && <div className='btn-show-more' onClick={() => setPageSize(6)}>SHOW MORE</div>}
         {
           pageSize === 6 &&
           <ReactPaginate
