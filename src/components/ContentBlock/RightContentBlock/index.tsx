@@ -1,6 +1,5 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { SvgIcon } from "../../../common/SvgIcon";
 import { ContentBlockProps } from "../types";
 import { Fade } from "react-awesome-reveal";
 import SocialMedia from '../../SocialMedia/index'
@@ -46,7 +45,7 @@ const RightBlock = ({
             </SectionSocialMedia>
           </Col>
           <Col lg={10} md={11} sm={12} xs={24}>  
-            <SvgIcon src={icon} width="98%" height="700px" />
+          <img className="photo-profile" src={`/img/svg/${icon}`} alt={icon}   />
           </Col>
         </Row>
       </Fade>
