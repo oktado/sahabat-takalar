@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy,useState } from "react";
 import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import MultimediaContent from "../../content/MultimediaContent.json";
@@ -17,9 +17,10 @@ const Header = lazy(() => import("../../components/Header"));
 const Footer = lazy(() => import("../../components/Footer"));
 
 const Home = () => {
+  const [isModalOpen,setIsModalOpen] = useState(false)
   return (
     <>
-    <Header/>
+    <Header isModalOpen={isModalOpen}/>
     <Container>
       <ScrollToTop />
       <ContentBlock
@@ -37,12 +38,16 @@ const Home = () => {
         title={MiddleBlockContent.title}
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
+        setIsModalOpen={setIsModalOpen}
+        isModalOpen={isModalOpen}
       />
        <MiddleBlock
         header={MultimediaContent.header}
         title={MultimediaContent.title}
         content={MultimediaContent.text}
         button={MultimediaContent.button}
+        setIsModalOpen={setIsModalOpen}
+        isModalOpen={isModalOpen}
       />
        <ProfileBlock
         header={ProfileContent.header}

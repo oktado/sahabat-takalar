@@ -4,9 +4,7 @@ import { ContentBlockProps } from "../types";
 import { Fade } from "react-awesome-reveal";
 import SocialMedia from '../../SocialMedia/index'
 
-// import FacebookLogo from '../../../../public/img/svg/facebook.png'
-// import InstagramLogo from '../../../../public/img/svg/instagram.png'
-// import TwitterLogo from '../../../../public/img/svg/twitter-sign.png'
+
 
 import {
   RightBlockContainer,

@@ -18,12 +18,12 @@ interface MiddleBlockProps {
   header: string,
   content?: string;
   button: string;
+  setIsModalOpen?: () => void;
+  isModalOpen?: boolean;
   t: any;
 }
 
-const MiddleBlock = ({ title, content, button, t,header }: MiddleBlockProps) => {
-  const [visible, setVisible] = useState(false);
- 
+const MiddleBlock = ({ title, content, button, t,header,setIsModalOpen,isModalOpen }: MiddleBlockProps) => { 
   return (
     <>
     <MiddleBlockSection>  
@@ -33,9 +33,9 @@ const MiddleBlock = ({ title, content, button, t,header }: MiddleBlockProps) => 
               <h6>{t(title)}</h6>
         </ContentWrapper>
         </Slide>
-     <CardNews showModalContent={() => setVisible(true)}  header={CardContent.header} title={CardContent.title} img={CardContent.img} content={CardContent.content}/>
+     <CardNews showModalContent={() => setIsModalOpen(true)}  header={CardContent?.header} title={CardContent?.title} img={CardContent?.img} content={CardContent?.content}/>
     </MiddleBlockSection>
-    <ModalContent visible={visible} closeModal={() => setVisible(false)} />
+    <ModalContent visible={isModalOpen} closeModal={() => setIsModalOpen(false)} />
      </>
   );
 };

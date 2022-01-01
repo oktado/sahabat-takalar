@@ -73,7 +73,6 @@ const handlePageClick = (e) => {
           pageRangeDisplayed={5}
           onPageChange={handlePageClick}
           containerClassName='pagination'
-          subContainerClassName="pages pagination"
           activeClassName="active"/>
         }                         
       </div>

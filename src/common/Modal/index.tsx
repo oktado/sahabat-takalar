@@ -14,16 +14,8 @@ interface ModalContentProps {
 const ModalContent = ({closeModal,visible} : ModalContentProps) => {
 return(
 <>
-{/* //   <div className='container-modal'>
-//       <img className='img-modal'/>
-//       <div className='container-text-modal'>
-//         <p className='date'></p>
-//         <p className='title-modal'></p>
-//         <p className='text-modal'></p>
-//       </div>
-//   </div> */}
   <Modal
-  style={{padding:"45px",top:"80px",background:"#202020"}}
+  style={{padding:"0px",top:"40px",background:"#202020"}}
   centered
   visible={visible}
   onOk={closeModal}

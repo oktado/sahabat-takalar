@@ -1,10 +1,11 @@
 .container-modal {
-  background-color: #202020;
+  background: linear-gradient(to right bottom, #212428, #16181c);
+  border-radius: 0px;
 }
 
 .ant-modal {
-  border-radius: 20px;
-  background-color: #202020;
+  border-radius: 0px;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   overflow-y: auto;
   overflow-x: auto;
 }
@@ -30,6 +31,7 @@
 .img-modal {
   width: 60%;
   height: 500px;
+  border-radius: 15px;
 }
 
 .date {
@@ -52,6 +54,10 @@
   font-size: 16px;
   color: #878e99;
   letter-spacing: 0;
+}
+
+.container-text-modal {
+  padding: 0px 40px;
 }
 
 @media screen and (max-width: 768px) {

@@ -19,7 +19,13 @@ import {
 
 import "./index.css"
 
-const Header = ({ t }: any) => {
+
+interface HeaderProps {
+  t?:any,
+  isModalOpen: boolean
+}
+
+const Header = ( {t,isModalOpen} : HeaderProps) => {
   const [visible, setVisibility] = useState(false);
 
   const showDrawer = () => {
@@ -71,8 +77,8 @@ const Header = ({ t }: any) => {
   };
 
   return (
-    <HeaderSection>
-      <Container>
+    <HeaderSection style={{display : isModalOpen ? "none" : ""}} >
+      <Container >
         <Row justify="space-between" >
             <ProfilePicture src={'img/svg/takalar-logo.png'}/>
           <NotHidden>
