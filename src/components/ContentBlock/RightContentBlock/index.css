@@ -6,9 +6,23 @@
   margin-left: 10px;
 }
 
+.photo-profile {
+  width: 98%;
+  height: 700px;
+  border-radius: 10px;
+  background: linear-gradient(to right bottom, #212428, #16181c);
+  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+}
+
 @media screen and (max-width: 768px) {
   .name {
     margin-left: 0;
+  }
+
+  .photo-profile {
+    width: 95%;
+    height: 500px;
   }
 }
 
@@ -16,5 +30,12 @@
   .name {
     margin-left: 20px;
     font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .photo-profile {
+    width: 95%;
+    height: 440px;
   }
 }
