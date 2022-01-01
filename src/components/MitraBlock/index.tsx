@@ -15,11 +15,12 @@ interface MitraBlockProps {
   header: string,
   content?: string;
   button?: string;
+  setIsModalMitraOpen?: () => void;
+  isModalMitraOpen?: boolean;
   t: any;
 }
 
-const MitraBlock = ({ title, content, button, t,header }: MitraBlockProps) => {
-  const [visibleModalMitra, setVisibleModalMitra] = useState(false);
+const MitraBlock = ({ title, content, button, t,header,setIsModalMitraOpen,isModalMitraOpen }: MitraBlockProps) => {
   return (
     <>
     <MiddleBlockSection>  
@@ -29,8 +30,8 @@ const MitraBlock = ({ title, content, button, t,header }: MitraBlockProps) => {
               <h6>{t(title)}</h6>
           </ContentWrapper>
       </Slide>
-        <MitraButton openModalMitra={() => setVisibleModalMitra(true)} />
-        <ModalMitra closeModalMitra={() => setVisibleModalMitra(false)} visibleModalMitra={visibleModalMitra}/>
+        <MitraButton openModalMitra={() => setIsModalMitraOpen(true)} />
+        <ModalMitra closeModalMitra={() => setIsModalMitraOpen(false)} visibleModalMitra={isModalMitraOpen}/>
     </MiddleBlockSection>
     
      </>

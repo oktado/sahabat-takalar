@@ -53,19 +53,6 @@
   margin-left: 20px;
 }
 
-.mitra-logo:hover {
-  background: #212428;
-  box-shadow: 16px 16px 42px #171515, -16px -16px 42px #232121;
-  border-radius: 10px;
-  z-index: 9999;
-  transition: 0.6s;
-  padding: 10px 10px;
-  width: 280px;
-  height: 209px;
-  cursor: pointer;
-  transition: 0.6s;
-}
-
 .mitra-logo {
   padding: 30px 10px;
   background: #202020;
@@ -102,6 +89,7 @@
 .img-mitra {
   width: 90px;
   height: 90px;
+  border-radius: 100%;
 }
 
 @media only screen and (max-width: 768px) {

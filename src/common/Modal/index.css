@@ -57,12 +57,20 @@
 }
 
 .container-text-modal {
-  padding: 0px 40px;
+  padding: 0px;
+}
+
+.container-content-modal {
+  padding: 25px;
 }
 
 @media screen and (max-width: 768px) {
   .img-modal {
     height: 250px;
     width: 600px;
+  }
+
+  .container-content-modal {
+    padding: 25px;
   }
 }

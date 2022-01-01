@@ -18,9 +18,10 @@ const Footer = lazy(() => import("../../components/Footer"));
 
 const Home = () => {
   const [isModalOpen,setIsModalOpen] = useState(false)
+  const [isModalMitraOpen,setIsModalMitraOpen] = useState(false)
   return (
     <>
-    <Header isModalOpen={isModalOpen}/>
+    <Header isModalOpen={isModalOpen} isModalMitraOpen={isModalMitraOpen}/>
     <Container>
       <ScrollToTop />
       <ContentBlock
@@ -59,6 +60,8 @@ const Home = () => {
         title={MitraContent.title}
         content={MitraContent.text}
         header={MitraContent.header}
+        setIsModalMitraOpen={setIsModalMitraOpen}
+        isModalMitraOpen={isModalMitraOpen}
       />
       <ContactBlock
         title={ContactContent.title}

@@ -21,11 +21,12 @@ import "./index.css"
 
 
 interface HeaderProps {
-  t?:any,
-  isModalOpen: boolean
+  t?:any;
+  isModalOpen: boolean;
+  isModalMitraOpen : boolean;
 }
 
-const Header = ( {t,isModalOpen} : HeaderProps) => {
+const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
   const [visible, setVisibility] = useState(false);
 
   const showDrawer = () => {
@@ -77,7 +78,7 @@ const Header = ( {t,isModalOpen} : HeaderProps) => {
   };
 
   return (
-    <HeaderSection style={{display : isModalOpen ? "none" : ""}} >
+    <HeaderSection style={{display : isModalOpen || isModalMitraOpen ? "none" : "", transition:"0,5s"}} >
       <Container >
         <Row justify="space-between" >
             <ProfilePicture src={'img/svg/takalar-logo.png'}/>

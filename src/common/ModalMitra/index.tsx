@@ -16,14 +16,16 @@ return(
 <>
   <Modal
   title="MITRA"
-  style={{padding:"45px",top:"80px",background:"#202020"}}
+  style={{padding:"0px",top:"40px",background:"#202020"}}
   centered
   visible={visibleModalMitra}
   onOk={closeModalMitra}
   onCancel={closeModalMitra}
   width={1216}
   footer={null}
+  className='modal-mitra'
 >
+<div className='container-content-modal-mitra'>
 <Row>
   <Col xl={11} lg={11} md={11} sm={24} xs={24} >
   <div className='container-img-modal-mitra'>
@@ -39,6 +41,7 @@ return(
 </div>
   </Col>
 </Row>
+</div>
 </Modal>
 </>
     )
