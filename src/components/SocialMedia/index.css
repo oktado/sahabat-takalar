@@ -28,7 +28,8 @@
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
   transition: all 0.3s ease-in-out;
-  box-shadow: 10px 10px 13px #212121, -10px -10px 13px #272727;
+  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
   transition: all 0.3s ease-in-out;
 }
 
