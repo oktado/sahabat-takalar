@@ -6,13 +6,18 @@
   margin-left: 10px;
 }
 
+.container-photo-profile {
+  border-radius: 10px;
+  background: #212121;
+  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
+  padding: 15px;
+}
+
 .photo-profile {
   width: 98%;
   height: 700px;
   border-radius: 10px;
-  background: linear-gradient(to right bottom, #212428, #16181c);
-  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
-  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
 }
 
 @media screen and (max-width: 768px) {

@@ -43,7 +43,9 @@ const RightBlock = ({
             </SectionSocialMedia>
           </Col>
           <Col lg={10} md={11} sm={12} xs={24}>  
-          <img className="photo-profile" src={`/img/svg/${icon}`} alt={icon}   />
+          <div className="container-photo-profile">
+            <img className="photo-profile" src={`/img/svg/${icon}`} alt={icon}   />
+          </div>
           </Col>
         </Row>
       </Fade>
