@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MiddleBlockSection = styled("section")`
   padding: 5rem 0 3rem;
 
-  border-bottom: 3px solid black;
+  border-bottom: 1px solid black;
   
 
   @media screen and (max-width: 1024px) {
