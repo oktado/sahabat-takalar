@@ -16,7 +16,7 @@ return(
 <>
   <Modal
   title="MITRA"
-  style={{padding:"0px",top:"40px",background:"#202020"}}
+  style={{padding:"0px",background:"#202020"}}
   centered
   visible={visibleModalMitra}
   onOk={closeModalMitra}

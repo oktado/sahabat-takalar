@@ -15,7 +15,7 @@ const ModalContent = ({closeModal,visible} : ModalContentProps) => {
 return(
 <>
   <Modal
-  style={{padding:"0px",top:"40px",background:"#202020"}}
+  style={{padding:"0px", top:"40px",background:"#202020"}}
   centered
   visible={visible}
   onOk={closeModal}
@@ -23,8 +23,9 @@ return(
   width={1216}
   footer={null}
   className='container-modal'
+  
 >
-<div className='container-content-modal'>
+<div className='container-content-m'>
 <div className='container-img-modal'>
     <img className="img-modal" src='img/svg/takalar-logo.png' />
 </div>
