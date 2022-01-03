@@ -28,6 +28,7 @@ interface HeaderProps {
 
 const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
   const [visible, setVisibility] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -70,7 +71,7 @@ const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
           onClick={() => scrollTo("contact")}
         >
           <Span>
-            <div className='btn-nav-login'>{t("LOGIN")}</div>
+            {isLogin ? <span>Hi, <span style={{color: "red"}}>User</span></span> : <div className='btn-nav-login' onClick={() => setIsLogin(true)}>{t("LOGIN")}</div>}
           </Span>
         </CustomNavLinkSmall>
       </>

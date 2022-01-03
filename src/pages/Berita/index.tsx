@@ -1,7 +1,12 @@
 import { lazy,useState } from "react";
+
+
+
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
+const Header = lazy(() => import("../../components/Header"));
+
 
 
 const  Berita = (props) => {
@@ -9,9 +14,10 @@ const  Berita = (props) => {
 
     const fetchUrl = "https://jsonplaceholder.typicode.com/albums/1/photos"
 
-    return(
-        <>  
-        <Container>   
+    return( 
+        <>
+        <Header/>
+        <Container>      
             <MiddleBlock
                 header={MiddleBlockContent.header}
                 title={MiddleBlockContent.title}

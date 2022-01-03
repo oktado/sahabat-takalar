@@ -2,6 +2,7 @@ import { lazy,useState } from "react";
 import MultimediaContent from "../../content/MultimediaContent.json";
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
+const Header = lazy(() => import("../../components/Header"));
 
 
 const Multimedia = (props) => {
@@ -10,7 +11,8 @@ const Multimedia = (props) => {
     const fetchUrl = "https://jsonplaceholder.typicode.com/albums/1/photos"
 
     return(
-        <>  
+        <>
+        <Header/>  
         <Container>   
             <MiddleBlock
                 header={MultimediaContent.header}
