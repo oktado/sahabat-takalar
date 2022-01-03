@@ -64,6 +64,24 @@
   padding: 25px;
 }
 
+.anticon svg {
+  fill: rgb(255, 255, 255);
+  background: #212121;
+  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  padding: 7px;
+  margin-top: 5px;
+  transition: 0.5s;
+}
+
+.anticon svg:hover {
+  fill: red;
+  transition: 0.5s;
+}
+
 @media screen and (max-width: 768px) {
   .img-modal {
     height: 250px;

@@ -16,9 +16,12 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Header = lazy(() => import("../../components/Header"));
 const Footer = lazy(() => import("../../components/Footer"));
 
-const Home = () => {
+const Home = (props) => {
   const [isModalOpen,setIsModalOpen] = useState(false)
   const [isModalMitraOpen,setIsModalMitraOpen] = useState(false)
+
+  const fetchUrl = "https://jsonplaceholder.typicode.com/albums/1/photos"
+
   return (
     <>
     <Header isModalOpen={isModalOpen} isModalMitraOpen={isModalMitraOpen}/>
@@ -41,6 +44,8 @@ const Home = () => {
         button={MiddleBlockContent.button}
         setIsModalOpen={setIsModalOpen}
         isModalOpen={isModalOpen}
+        location={props.location.pathname}
+        fetchUrl={fetchUrl}
       />
        <MiddleBlock
         header={MultimediaContent.header}
@@ -49,6 +54,8 @@ const Home = () => {
         button={MultimediaContent.button}
         setIsModalOpen={setIsModalOpen}
         isModalOpen={isModalOpen}
+        location={props.location.pathname}
+        fetchUrl={fetchUrl}
       />
        <ProfileBlock
         header={ProfileContent.header}

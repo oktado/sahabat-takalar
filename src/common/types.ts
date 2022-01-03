@@ -19,8 +19,8 @@ export interface SvgIconProps {
 }
 
 export interface InputProps {
-  name: string;
-  placeholder: string;
+  name?: string;
+  placeholder?: string;
   t: any;
   type?: string;
   value?: string;
@@ -41,5 +41,8 @@ export interface CardProps {
   title?: string;
   header?: string;
   content?: string;
+  location?: string;
+  route?: string;
+  fetchUrl?: string;
   showModalContent?: () => void;
 }

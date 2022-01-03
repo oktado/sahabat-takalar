@@ -14,6 +14,16 @@ const routes = [
     exact: true,
     component: "Login",
   },
+  {
+    path: ["/berita"],
+    exact: true,
+    component: "Berita",
+  },
+  {
+    path: ["/multimedia"],
+    exact: true,
+    component: "Multimedia",
+  },
 ];
 
 export default routes;
