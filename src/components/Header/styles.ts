@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 
 export const HeaderSection = styled("header")`
- @media only screen and (min-width: 800px) {
+ 
   padding: 0 30px;
   background-color:#202020;
   height: 90px;
@@ -11,13 +11,16 @@ export const HeaderSection = styled("header")`
   left: 0px;
   z-index:999999;
   width:100%;
- }
  
-  @media only screen and (max-width: 411px) {
-    padding: 1rem 0.5rem;
+ 
+  @media only screen and (max-width: 426px) {
+  padding: 1rem 0.5rem;
   background-color:#202020;
   height: 90px;
-  
+  position: fixed;
+  left: 0px;
+  z-index:999999;
+  width:100%;
   }
 
   .ant-row-space-between {
