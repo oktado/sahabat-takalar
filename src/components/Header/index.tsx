@@ -71,7 +71,7 @@ const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
           onClick={() => scrollTo("contact")}
         >
           <Span>
-            {isLogin ? <span>Hi, <span style={{color: "red"}}>User</span></span> : <div className='btn-nav-login' onClick={() => setIsLogin(true)}>{t("LOGIN")}</div>}
+            {isLogin ? <span className='user-login-text'>Hi, <span style={{color: "red"}}>User</span></span> : <div className='btn-nav-login' onClick={() => setIsLogin(true)}>{t("LOGIN")}</div>}
           </Span>
         </CustomNavLinkSmall>
       </>
