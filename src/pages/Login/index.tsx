@@ -1,16 +1,13 @@
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 import {Row,Col} from 'antd';
 import Select from 'react-select'
 import Input from "../../common/Input";
 import { useForm } from "../../common/utils/useForm";
-import {useHistory,useParams} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import ProfilePicture from "../../common/ProfilePicture";
 import validate from "../../common/utils/validationRules";
-import {Button} from '../../common/Button/index'
-import { Span } from "../../components/ContactForm/styles";
 import {  ValidationTypeProps } from "../../components/ContactForm/types";
 import { Label } from "../../common/TextArea/styles";
-import {Container} from '../../common/Input/styles'
 import './index.css'
 
 interface LoginProps {
@@ -90,7 +87,7 @@ const Login = (props : LoginProps) => {
            </div>
             <div className='container-form-login' >
             {props.location.pathname === "/login" ?  <div>
-                <Input
+            <Input
                 type="text"
                 name="Username"
                 placeholder="Username"

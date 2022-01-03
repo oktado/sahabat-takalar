@@ -24,6 +24,11 @@ const routes = [
     exact: true,
     component: "Multimedia",
   },
+  {
+    path: ["/member-area"],
+    exact: true,
+    component: "MemberArea",
+  },
 ];
 
 export default routes;
