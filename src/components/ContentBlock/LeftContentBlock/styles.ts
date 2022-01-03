@@ -11,6 +11,7 @@ export const LeftContentSection = styled("section")`
 
   @media only screen and (max-width: 426px) {
     padding: 7rem 0 4rem;
+    margin-top: 100px
   }
 `;
 
@@ -40,6 +41,11 @@ export const MinTitle = styled("h6")`
   text-transform: uppercase;
   color: #000;
   font-family: 'Montserrat', sans-serif;
+
+  @media only screen and (max-width: 575px) {
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 export const MinPara = styled("p")`
