@@ -82,7 +82,7 @@ const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
     <HeaderSection style={{display : isModalOpen || isModalMitraOpen ? "none" : "", transition:"0,5s"}} >
       <Container >
         <Row justify="space-between" >
-            <ProfilePicture src={'img/svg/takalar-logo.png'}/>
+            <ProfilePicture pathname="/" src={'img/svg/takalar-logo.png'}/>
           <NotHidden>
             <MenuItem />
           </NotHidden>
