@@ -18,20 +18,12 @@ const Login = (props : LoginProps) => {
     const history = useHistory();
 
     const [registerType,setRegisterType] = useState("")
-    const typeRegister = ["Personal","Community"]
     const [isHoverToggle,setIsHoverToggle] = useState("")
     const [isActiveToggle,setIsActiveToggle] = useState("")
 
     const { values, errors, handleChange, handleSubmit } = useForm(
         validate
       ) as any;
-
-      const ValidationType = ({ type }: ValidationTypeProps) => {
-        const ErrorMessage = errors[type];
-        return (
-            <Span erros={errors[type]}>{ErrorMessage}</Span>
-        );
-      };
 
       const optionsRegister = [
         { value: 'chocolate', label: 'Chocolate' },
@@ -42,9 +34,7 @@ const Login = (props : LoginProps) => {
         { value: 'vanilla1', label: 'Vanilla1' }
       ]
 
-
       const ToggleOptions = ['Personal','Community']
-
 
       const customStyles = {
         option: (provided, {isSelected,isFocused}) => ({
@@ -70,20 +60,11 @@ const Login = (props : LoginProps) => {
           }
       }
 
-
-      const ToggleRegister = ({menu,index}) => {
-          return (
-            <div key={index} className={`${isHoverToggle === menu || isActiveToggle === menu ? "btn-toggle-register-active" : "btn-toggle-register"}`} onMouseEnter={()=>setIsHoverToggle(menu)} onMouseLeave={() => setIsHoverToggle("")} onClick={()=>setIsActiveToggle(menu)}>
-            <span className={`${isHoverToggle === menu || isActiveToggle === menu ? "title-btn-register-toggle-hover" : "title-btn-register-toggle"}`}>{menu}</span>
-            </div>
-          )
-      }
-
   return (
     <div className="container-login-page">
        <div className="content-login-page">
            <div className="container-picture">
-            <ProfilePicture src={'img/svg/takalar-logo.png'}/>
+            <ProfilePicture pathname='/' src={'img/svg/takalar-logo.png'}/>
            </div>
             <div className='container-form-login' >
             {props.location.pathname === "/login" ?  <div>
@@ -94,7 +75,7 @@ const Login = (props : LoginProps) => {
                 value={values.username || ""}
                 onChange={handleChange}      
             />
-            <ValidationType type="username" />
+            
             <Input
                 type="password"
                 name="Password"
@@ -102,7 +83,6 @@ const Login = (props : LoginProps) => {
                 value={values.password || ""}
                 onChange={handleChange}      
             />
-            <ValidationType type="password" />
             </div>:
             <div>
             <Row>

@@ -23,13 +23,14 @@ interface MiddleBlockProps {
   isModalOpen?: boolean;
   location?: string;
   fetchUrl?: string;
+  id?: string;
   t: any;
 }
 
-const MiddleBlock = ({ title, content, button, t,header,setIsModalOpen,isModalOpen,location,fetchUrl }: MiddleBlockProps) => { 
+const MiddleBlock = ({id, title, content, button, t,header,setIsModalOpen,isModalOpen,location,fetchUrl }: MiddleBlockProps) => { 
   return (
     <>
-    <MiddleBlockSection>  
+    <MiddleBlockSection id={id}>  
     <Slide direction="up" triggerOnce={true}>
           <ContentWrapper>
                  <Row>

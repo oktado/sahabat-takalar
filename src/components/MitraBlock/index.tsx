@@ -8,6 +8,7 @@ import ModalMitra  from '../../common/ModalMitra'
 
 
 import './index.css';
+import { StringMap } from "i18next";
 
 
 interface MitraBlockProps {
@@ -17,13 +18,14 @@ interface MitraBlockProps {
   button?: string;
   setIsModalMitraOpen?: () => void;
   isModalMitraOpen?: boolean;
+  id?:String;
   t: any;
 }
 
-const MitraBlock = ({ title, content, button, t,header,setIsModalMitraOpen,isModalMitraOpen }: MitraBlockProps) => {
+const MitraBlock = ({id, title, content, button, t,header,setIsModalMitraOpen,isModalMitraOpen }: MitraBlockProps) => {
   return (
     <>
-    <MiddleBlockSection>  
+    <MiddleBlockSection id={id}>  
       <Slide direction="up" triggerOnce={true}>
           <ContentWrapper>
               <p className='header-title'>{t(header)}</p>

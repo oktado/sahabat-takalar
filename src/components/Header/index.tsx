@@ -43,27 +43,29 @@ const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
       const element = document.getElementById(id) as HTMLDivElement;
       element.scrollIntoView({
         behavior: "smooth",
+        block: "start",
+        inline: "start"
       });
       setVisibility(false);
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("Home")}>
           <Span>{t("HOME")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("Berita")}>
           <Span>{t("BERITA")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("Multimedia")}>
           <Span>{t("MULTIMEDIA")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("Profile")}>
           <Span>{t("PROFILE")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("Mitra")}>
           <Span>{t("MITRA")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("Contact")}>
           <Span>{t("CONTACT")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall

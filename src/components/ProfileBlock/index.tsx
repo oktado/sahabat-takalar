@@ -14,14 +14,15 @@ interface MiddleBlockProps {
   header: string,
   content?: string;
   button: string;
+  id?:string;
   t: any;
 }
 
-const ProfileBlock = ({ title, content, button, t,header }: MiddleBlockProps) => {
+const ProfileBlock = ({id, title, content, button, t,header }: MiddleBlockProps) => {
  
   return (
     <>
-    <MiddleBlockSection>  
+    <MiddleBlockSection id={id}>  
     <Slide direction="up" triggerOnce={true}>
           <ContentWrapper>
               <p className='header-title'>{t(header)}</p>

@@ -28,9 +28,9 @@ const RightBlock = ({
   id
 }: ContentBlockProps) => {
   return (
-    <RightBlockContainer>
+    <RightBlockContainer id={id}>
       <Fade direction="right" triggerOnce={true}>
-        <Row justify="space-between" align="top" id={id}>
+        <Row justify="space-between" align="top" >
           <Col lg={12} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <p>{t(greetings)}</p>

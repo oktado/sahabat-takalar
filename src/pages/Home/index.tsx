@@ -1,4 +1,6 @@
-import { lazy,useState } from "react";
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { lazy,useState,useRef } from "react";
 import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import MultimediaContent from "../../content/MultimediaContent.json";
@@ -35,7 +37,7 @@ const Home = (props) => {
         job={IntroContent.job}
         name={IntroContent.name}
         icon="takalar-profile.png"
-        id="intro"
+        id="Home"
       />
       <MiddleBlock
         header={MiddleBlockContent.header}
@@ -46,6 +48,7 @@ const Home = (props) => {
         isModalOpen={isModalOpen}
         location={props.location.pathname}
         fetchUrl={fetchUrl}
+        id="Berita"
       />
        <MiddleBlock
         header={MultimediaContent.header}
@@ -56,12 +59,14 @@ const Home = (props) => {
         isModalOpen={isModalOpen}
         location={props.location.pathname}
         fetchUrl={fetchUrl}
+        id="Multimedia"
       />
        <ProfileBlock
         header={ProfileContent.header}
         title={ProfileContent.title}
         content={ProfileContent.text}
         button={ProfileContent.button}
+        id="Profile"
       />
       <MitraBlock
         title={MitraContent.title}
@@ -69,11 +74,13 @@ const Home = (props) => {
         header={MitraContent.header}
         setIsModalMitraOpen={setIsModalMitraOpen}
         isModalMitraOpen={isModalMitraOpen}
+        id="Mitra"
       />
       <ContactBlock
         title={ContactContent.title}
         content={ContactContent.text}
         header={ContactContent.header}
+        id="Contact"
       />
     </Container>
     <Footer/>

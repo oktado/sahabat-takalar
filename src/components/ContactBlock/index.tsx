@@ -17,13 +17,14 @@ interface ContactBlockProps {
   content?: string;
   button?: string;
   t: any;
+  id?: string;
 }
 
-const ContactBlock = ({ title, content, button, t,header }: ContactBlockProps) => {
+const ContactBlock = ({id, title, content, button, t,header }: ContactBlockProps) => {
  
   return (
     <>
-    <MiddleBlockSection>  
+    <MiddleBlockSection id={id}>  
       <Slide direction="up" triggerOnce={true}>
           <div className='title-contact'>
              <div className="container-title-contact">
