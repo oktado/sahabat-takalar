@@ -81,7 +81,7 @@ const ContactForm = () => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">SUBMIT</Button>
+                <div className="btn-submit-contact" name="submit">SUBMIT</div>
               </ButtonContainer>
             </FormGroup>
            </div>

@@ -12,7 +12,7 @@ const Multimedia = (props) => {
 
     return(
         <>
-        <Header/>  
+        <Header isModalOpen={isModalOpen}/>  
         <Container>   
             <MiddleBlock
                 header={MultimediaContent.header}

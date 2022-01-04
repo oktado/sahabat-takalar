@@ -16,7 +16,7 @@ const  Berita = (props) => {
 
     return( 
         <>
-        <Header/>
+        <Header isModalOpen={isModalOpen}/>
         <Container>      
             <MiddleBlock
                 header={MiddleBlockContent.header}

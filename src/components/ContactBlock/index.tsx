@@ -1,15 +1,8 @@
 import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
-import { MiddleBlockSection,ContentWrapper } from "./styles";
-
+import { MiddleBlockSection } from "./styles";
 import ContactForm from '../../components/ContactForm'
-
-
 import './index.css'
-
-
-
-
 
 interface ContactBlockProps {
   title: string;
@@ -28,7 +21,7 @@ const ContactBlock = ({id, title, content, button, t,header }: ContactBlockProps
       <Slide direction="up" triggerOnce={true}>
           <div className='title-contact'>
              <div className="container-title-contact">
-             <p className='header-title'>{t(header)}</p>
+               <p className='header-title'>{t(header)}</p>
               <h6>{t(title)}</h6>
              </div>
           </div>
@@ -38,5 +31,4 @@ const ContactBlock = ({id, title, content, button, t,header }: ContactBlockProps
      </>
   );
 };
-
 export default withTranslation()(ContactBlock);
