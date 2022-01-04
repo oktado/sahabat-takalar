@@ -29,6 +29,11 @@ const routes = [
     exact: true,
     component: "MemberArea",
   },
+  {
+    path: ["/privacy-policy"],
+    exact: true,
+    component: "PrivacyPolicy",
+  },
 ];
 
 export default routes;
