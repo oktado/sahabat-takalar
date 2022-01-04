@@ -220,7 +220,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 9px;
     position: absolute;
-    bottom: 290px;
+    bottom: 100px;
     cursor: pointer;
     transition: 0.8s;
     font-weight: bold;
@@ -269,17 +269,31 @@
   }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 426px) {
   .text-member-info {
     color: #c4cfde;
     font-family: "Montserrat", sans-serif;
     font-size: 9px;
     position: absolute;
-    bottom: 100px;
+    bottom: 455px;
     cursor: pointer;
     transition: 0.8s;
     font-weight: bold;
-    left: 60px;
+    left: 87px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .text-member-info {
+    color: #c4cfde;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    position: absolute;
+    bottom: 455px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-weight: bold;
+    left: 87px;
   }
 }
 
