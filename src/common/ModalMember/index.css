@@ -1,0 +1,98 @@
+.container-modal {
+  background: linear-gradient(to right bottom, #212428, #16181c);
+  border-radius: 0px;
+}
+
+.ant-modal {
+  border-radius: 0px;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.ant-modal-body {
+  background-color: #202020;
+  padding: 0;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.ant-modal-content {
+  background-color: #202020;
+}
+
+.container-img-modal {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.img-modal {
+  width: 60%;
+  height: 500px;
+  border-radius: 15px;
+}
+
+.date {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #c4cfde;
+  letter-spacing: 0;
+}
+
+.title-modal {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  color: #c4cfde;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.text-modal {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #878e99;
+  letter-spacing: 0;
+}
+
+.container-text-modal {
+  padding: 30px;
+}
+
+.container-content-modal {
+  padding: 25px;
+}
+
+.anticon svg {
+  fill: rgb(255, 255, 255);
+  background: #212121;
+  -webkit-box-shadow: 8px 8px 13px #171717, -8px -8px 13px #232323;
+  box-shadow: 8px 8px 13px #171717, -8px -8px 13px #252525;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  padding: 7px;
+  margin-top: 5px;
+  transition: 0.5s;
+}
+
+.anticon svg:hover {
+  fill: red;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .img-modal {
+    height: 250px;
+    width: 600px;
+  }
+
+  .container-content-modal {
+    padding: 25px;
+  }
+
+  .container-text-modal {
+    padding: 0;
+  }
+}

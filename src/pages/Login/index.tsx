@@ -6,8 +6,10 @@ import { useForm } from "../../common/utils/useForm";
 import {useHistory} from 'react-router-dom'
 import ProfilePicture from "../../common/ProfilePicture";
 import validate from "../../common/utils/validationRules";
-import {  ValidationTypeProps } from "../../components/ContactForm/types";
 import { Label } from "../../common/TextArea/styles";
+
+import ModalMember from '../../common/ModalMember'
+
 import './index.css'
 
 interface LoginProps {
@@ -20,6 +22,8 @@ const Login = (props : LoginProps) => {
     const [registerType,setRegisterType] = useState("")
     const [isHoverToggle,setIsHoverToggle] = useState("")
     const [isActiveToggle,setIsActiveToggle] = useState("")
+    const [isModalMemberOpen,setIsModalMemberOpen] = useState(false)
+    
 
     const { values, errors, handleChange, handleSubmit } = useForm(
         validate
@@ -61,6 +65,7 @@ const Login = (props : LoginProps) => {
       }
 
   return (
+    <>
     <div className="container-login-page">
        <div className="content-login-page">
            <div className="container-picture">
@@ -160,15 +165,17 @@ const Login = (props : LoginProps) => {
                     />
                 </Col>
             </Row>
-            
             </div>}
-            <div className="container-btn-login">
+            <div className="container-btn-login">      
                 <div className='btn-submit-login'>{props.location.pathname === "/login" ? "LOGIN" : "SUBMIT"}</div>
             </div>
             <span className="create-acount-text" onClick={() => history.push(props.location.pathname === "/login" ? "/register" : "/login")}>{props.location.pathname === "/login" ? "Create Account" : "Already have account?"}</span>
+           {props.location.pathname === "/login" && <span className="text-member-info" onClick={() => setIsModalMemberOpen(true)}>Benefit for member Sahabat Takalar</span>}
         </div>
        </div>
     </div>
+    <ModalMember closeModal={() => setIsModalMemberOpen(false)} visible={isModalMemberOpen}/>
+    </>  
   );
 };
 

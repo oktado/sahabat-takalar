@@ -44,10 +44,22 @@
   font-family: "Montserrat", sans-serif;
   font-size: smaller;
   position: relative;
-  bottom: 60px;
+  bottom: 85px;
   cursor: pointer;
   font-weight: 700;
   transition: 0.5s;
+}
+
+.text-member-info {
+  color: #c4cfdede;
+  font-family: "Montserrat", sans-serif;
+  font-size: smaller;
+  position: relative;
+  bottom: 85px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.5s;
+  left: 65px;
 }
 
 .forgot-password-text {
@@ -143,7 +155,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 35px;
 }
 
 .btn-submit-login:hover {
@@ -197,21 +209,22 @@
     font-family: "Montserrat", sans-serif;
     font-size: 9px;
     position: relative;
-    bottom: 75px;
+    bottom: 90px;
     cursor: pointer;
     transition: 0.8s;
     font-weight: bold;
   }
 
-  .forgot-password-text {
+  .text-member-info {
     color: #c4cfde;
     font-family: "Montserrat", sans-serif;
     font-size: 9px;
-    position: relative;
-    bottom: 65px;
+    position: absolute;
+    bottom: 290px;
     cursor: pointer;
     transition: 0.8s;
     font-weight: bold;
+    left: 85px;
   }
 
   .container-select {
@@ -256,6 +269,20 @@
   }
 }
 
+@media screen and (max-width: 415px) {
+  .text-member-info {
+    color: #c4cfde;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    position: absolute;
+    bottom: 100px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-weight: bold;
+    left: 60px;
+  }
+}
+
 @media screen and (max-width: 376px) {
   .container-login-page {
     background-color: #202020;
@@ -293,5 +320,31 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+  }
+
+  .text-member-info {
+    color: #c4cfde;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    position: absolute;
+    bottom: 370px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-weight: bold;
+    left: 67px;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .text-member-info {
+    color: #c4cfde;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    position: absolute;
+    bottom: 200px;
+    cursor: pointer;
+    transition: 0.8s;
+    font-weight: bold;
+    left: 60px;
   }
 }
