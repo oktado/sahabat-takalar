@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {useLocation,useHistory} from 'react-router-dom'
 import { Row, Col, Drawer } from "antd";
 import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
@@ -26,9 +27,18 @@ interface HeaderProps {
   isModalMitraOpen : boolean;
 }
 
-const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
+const Header = ({t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
   const [visible, setVisibility] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+  const [pathname, setPathname] = useState("");
+
+  const location = useLocation();
+  const history = useHistory();
+
+  useEffect(() => {
+    setPathname(location.pathname)
+    console.log(pathname)
+  },[])
 
   const showDrawer = () => {
     setVisibility(!visible);
@@ -39,8 +49,11 @@ const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
   };
 
   const MenuItem = () => {
+
+
     const scrollTo = (id: string) => {
       const element = document.getElementById(id) as HTMLDivElement;
+
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -48,24 +61,36 @@ const Header = ( {t,isModalOpen,isModalMitraOpen} : HeaderProps) => {
       });
       setVisibility(false);
     };
+
+    const handleMenuNavbar = (component:string) => {
+    if(location.pathname !== "/") {
+      history.push("/");
+      setTimeout(() => {
+        scrollTo(component);
+      },1200)
+    } else {
+      scrollTo(component)
+    }
+    }
+
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("Home")}>
+        <CustomNavLinkSmall onClick={() => handleMenuNavbar("Home")}>
           <Span>{t("HOME")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("Berita")}>
+        <CustomNavLinkSmall onClick={() => handleMenuNavbar("Berita")}>
           <Span>{t("BERITA")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("Multimedia")}>
+        <CustomNavLinkSmall onClick={() => handleMenuNavbar("Multimedia")}>
           <Span>{t("MULTIMEDIA")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("Profile")}>
+        <CustomNavLinkSmall onClick={() => handleMenuNavbar("Profile")}>
           <Span>{t("PROFILE")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("Mitra")}>
+        <CustomNavLinkSmall onClick={() => handleMenuNavbar("Mitra")}>
           <Span>{t("MITRA")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("Contact")}>
+        <CustomNavLinkSmall onClick={() => handleMenuNavbar("Contact")}>
           <Span>{t("CONTACT")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
