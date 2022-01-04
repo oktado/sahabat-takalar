@@ -1,6 +1,6 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Slide, Zoom } from "react-awesome-reveal";
+import { Zoom,Fade} from "react-awesome-reveal";
 import {  ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
 import validate from "../../common/utils/validationRules";
@@ -31,12 +31,12 @@ const ContactForm = () => {
     <ContactContainer>
       <Row justify="space-between" align="middle">
         <Col lg={10} md={11} sm={24} xs={24}>
-          <Slide direction="left" triggerOnce={true}>
+          <Fade triggerOnce={true}>
             <Block/>
-          </Slide>
+          </Fade>
         </Col>
         <Col lg={14} md={12} sm={24} xs={24}>
-          <Slide direction="right" triggerOnce={true}>
+          <Fade triggerOnce={true}>
            <div className="container-form-contact">
            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
               <Row>
@@ -85,7 +85,7 @@ const ContactForm = () => {
               </ButtonContainer>
             </FormGroup>
            </div>
-          </Slide>
+          </Fade>
         </Col>
       </Row>
     </ContactContainer>
